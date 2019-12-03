@@ -6274,13 +6274,13 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #5a5c69 !important;
+  background-color: #4e73df !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
 button.bg-dark:hover,
 button.bg-dark:focus {
-  background-color: #42444e !important;
+  background-color: #4e73df!important;
 }
 
 .bg-white {
@@ -9902,7 +9902,7 @@ a:focus {
   width: 1rem;
   text-align: center;
   float: right;
-  
+
   vertical-align: 0;
   border: 0;
   font-weight: 900;
