@@ -181,7 +181,7 @@
   
       </ul>
       <!-- End of Sidebar -->
-    <!-- End of Sidebar -->
+  
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -413,6 +413,57 @@
               </div>
 
             </div>
+              <!-- Bar Chart Rainfall -->
+              <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                      <div id="chartContainer" style="height: 100; width: 100%;"></div>
+                    <h6 class="m-0 font-weight-bold text-primary"> Rainfall Bar Chart</h6>
+                  </div>
+                  <div class="card-body">
+                      <script>
+                          window.onload = function () {
+                          
+                          var chart = new CanvasJS.Chart("chartContainer", {
+                            animationEnabled: true,
+                            theme: "light2", // "light1", "light2", "dark1", "dark2"
+                            title:{
+                              text: "Yedshi Rainfall "
+                            },
+                            axisY: {
+                              title: "Rainfall(MM)"
+                            },
+                            data: [{        
+                              type: "column",  
+                            
+                              
+                              
+                              dataPoints: [      
+                                { y: 2, label: "January" },
+                                { y: 4,  label: "February" },
+                                { y: 5,  label: "March" },
+                                { y: 12,  label: "April" },
+                                { y: 28,  label: "May" },
+                                { y: 143, label: "June" },
+                                { y: 177,  label: "July" },
+                                { y: 151,  label: "August" },
+                          { y: 197,  label: "September" },
+                          { y: 64,  label: "October" },
+                          { y: 24,  label: "November" },
+                          { y: 6,  label: "December" }
+                              ]
+                            }]
+                          });
+                          chart.render();
+                          
+                          }
+                          </script>
+                          <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
 
             <!-- Donut Chart -->
             <div class="col-xl-4 col-lg-5">
@@ -431,6 +482,8 @@
                 </div>
               </div>
             </div>
+
+            
           </div>
 
         </div>
@@ -496,6 +549,9 @@
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="js/demo/chart-bar-demo.js"></script>
+  <script src="js/demo/chart-bar-rainfall.js"></script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </body>
 
