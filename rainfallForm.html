@@ -33,18 +33,32 @@ function filterFunction() {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Charts</title>
+  <title>Borewell Data Collection</title>
 
-  <!-- Custom fonts for this template-->
+  <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template-->
+  <!-- Custom styles for this template -->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap-form/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 
-<!-- NAVBAR-->
 <nav class="navbar navbar-expand-lg py-3 navbar-light bg-gradient-primary shadow-sm">
   <div class="container">
     <a href="#" class="navbar-brand">
@@ -71,182 +85,182 @@ function filterFunction() {
       </ul>
     </div>
   </div>
-    <!-- Nav Item - Pages Collapse Menu -->
-    <!--<li class="nav-item">
-     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-        <i class="fas fa-fw fa-folder"></i>
-        <span>Pages</span>
+</nav>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+        </div>
+        <div class="sidebar-brand-text mx-3"> Mahabhujal </sup></div>
       </a>
-      <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <h6 class="collapse-header">Login Screens:</h6>
-          <a class="collapse-item" href="login.html">Login</a>
-          <a class="collapse-item" href="register.html">Register</a>
-          <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-          <div class="collapse-divider"></div>
-          <h6 class="collapse-header">Other Pages:</h6>
-          <a class="collapse-item" href="404.html">404 Page</a>
-          <a class="collapse-item" href="blank.html">Blank Page</a>
-        </div>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Interface
       </div>
-    </li>-->
-  </nav>
 
-  <body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-      <!-- Sidebar -->
-      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-          <div class="sidebar-brand-icon rotate-n-15">
-          </div>
-          <div class="sidebar-brand-text mx-3"> Mahabhujal </sup></div>
-
-
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Settings</span>
         </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Admin:</h6>
+            <a class="collapse-item" href="#">Mail Server Settings</a>
+            <a class="collapse-item" href="#">Records</a>
+            <a class="collapse-item" href="#">Approval</a>
+          </div>
+        </div>
+      </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <!--
+        <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Support Us</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Surveys:</h6>
+            <a class="collapse-item" href="#">Borewells</a>
+            <a class="collapse-item" href="#">Rainfall</a>
+            <a class="collapse-item" href="utilities-color.html">Colors</a>
+            <a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a>
+          </div>
+        </div>
+      </li> -->
 
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+       <!-- Nav Item - BoreWell -->
+       <li class="nav-item">
+          <a class="nav-link" href="borewellForm.html">
+            <i class="fas fa-upload"></i>
+            <span>Borewell</span></a>
         </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Interface
-        </div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Settings</span>
-          </a>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Admin:</h6>
-              <a class="collapse-item" href="#">Mail Server Settings</a>
-              <a class="collapse-item" href="#">Records</a>
-              <a class="collapse-item" href="#">Approval</a>
-            </div>
-          </div>
+         <!-- Nav Item - Rainfall -->
+       <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-spinner"></i>
+            <span>Rainfall</span></a>
         </li>
 
-        <!-- Nav Item - Utilities Collapse Menu
-        <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Support Us</span>
-          </a>
-          <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Surveys:</h6>
-              <a class="collapse-item" href="#">Borewells</a>
-              <a class="collapse-item" href="#">Rainfall</a>
-             <a class="collapse-item" href="utilities-color.html">Colors</a>
-              <a class="collapse-item" href="utilities-border.html">Borders</a>
-              <a class="collapse-item" href="utilities-animation.html">Animations</a>
-              <a class="collapse-item" href="utilities-other.html">Other</a>
-            </div>
+         <!-- Nav Item - Water Level -->
+       <li class="nav-item">
+          <a class="nav-link" href="waterLevelForm.html">
+            <i class="fa fa-plus-square"></i>
+            <span>Water Level</span></a>
+        </li>
+
+
+          <!-- Nav Item - Trees -->
+            <li class="nav-item">
+                    <a class="nav-link" href="treesForm.html">
+                    <i class="fa fa-tree"></i>
+                    <span>Trees</span></a>
+                </li>
+
+
+
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Analysis
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <!--<li class="nav-item">
+       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Pages</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Login Screens:</h6>
+            <a class="collapse-item" href="login.html">Login</a>
+            <a class="collapse-item" href="register.html">Register</a>
+            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Other Pages:</h6>
+            <a class="collapse-item" href="404.html">404 Page</a>
+            <a class="collapse-item" href="blank.html">Blank Page</a>
           </div>
-        </li>-->
-
-
- <!-- Nav Item - BoreWell -->
- <li class="nav-item">
-    <a class="nav-link" href="borewellForm.html">
-      <i class="fas fa-upload"></i>
-      <span>Borewell</span></a>
-  </li>
-
-   <!-- Nav Item - Rainfall -->
- <li class="nav-item">
-    <a class="nav-link" href="rainfallForm.html">
-      <i class="fas fa-spinner"></i>
-      <span>Rainfall</span></a>
-  </li>
-
-   <!-- Nav Item - Water Level -->
- <li class="nav-item">
-    <a class="nav-link" href="waterLevelForm.html">
-      <i class="fa fa-plus-square"></i>
-      <span>Water Level</span></a>
-  </li>
-
-  <!-- Nav Item - Trees -->
- <li class="nav-item">
-    <a class="nav-link" href="treesForm.html">
-      <i class="fa fa-tree"></i>
-      <span>Trees</span></a>
-  </li>
-
-
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-          Analysis
         </div>
+      </li>-->
 
+      <!-- Nav Item - Alerts -->
+      <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-bell"></i>
+            <span>Alerts</span></a>
+        </li>
 
-        <!-- Nav Item - Alerts -->
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="charts.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Charts</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+
         <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="fas fa-bell"></i>
-              <span>Alerts</span></a>
-          </li>
-
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-          <a class="nav-link" href="charts.html">
+          <a class="nav-link" href="tables.html">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
+            <span>Borewell</span></a>
         </li>
-
-        <!-- Nav Item - Tables -->
-
-          <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-              <i class="fas fa-fw fa-chart-area"></i>
-              <span>Borewell</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="rain.html">
-              <i class="fas fa-fw fa-chart-area"></i>
-              <span>Rainfall</span></a>
-          </li>
-
-
-        <!-- Nav Item - Maps -->
         <li class="nav-item">
-          <a class="nav-link" href="maps.html">
-            <i class="fas fa-map"></i>
-            <span>Maps</span></a>
+          <a class="nav-link" href="rain.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Rainfall</span></a>
         </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
 
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-          <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
+      <!-- Nav Item - Maps -->
+      <li class="nav-item">
+        <a class="nav-link" href="maps.html">
+          <i class="fas fa-map"></i>
+          <span>Maps</span></a>
+      </li>
 
-      </ul>
-      <!-- End of Sidebar -->
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
 
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -330,11 +344,11 @@ function filterFunction() {
                     </form>
                     <!-- ample single danger button -->
                     <div class="btn-group">
-                     <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Village
-                     </button>
-                     <div id="myDropdown" class="dropdown-menu">
-                       <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                    <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Village
+                    </button>
+                    <div id="myDropdown" class="dropdown-menu">
+                      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a class="dropdown-item" href ="#">Ambehol</a>
           <a class="dropdown-item" href ="#">Ambejawalga</a>
           <a class="dropdown-item" href ="#">Ambewadi</a>
@@ -465,6 +479,7 @@ function filterFunction() {
 
             </div>
                     </form>
+
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -630,78 +645,89 @@ function filterFunction() {
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Charts</h1>
-          <p class="mb-4">These Charts Defines Status of all Borewell and Rainfall in a village on Daily/Monthly/Yearly basis.</p>
+       
 
-          <!-- Content Row -->
-          <div class="row">
+        
+       
+       
+        <div class="container-contact100">
+                <div class="wrap-contact100">
+                    <form class="contact100-form validate-form">
+                        <span class="contact100-form-title">
+                             Rainfall Data Collection
+                        </span>
+        
+                        <label class="label-input100" for="first-name">Volunteer's Name *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 rs1 validate-input">
+                        <input class="input100" type="text" name="last-name" placeholder="Last name">
+                            <span class="focus-input100"></span>
+                        </div>
+        
+                        <label class="label-input100" for="location">Location *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="text" class="input100" type="text" name="location" placeholder="Enter your location">
+                            <span class="focus-input100"></span>
+                        
+                        </div>
+                        <label class="label-input100" for="">Rainfall *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="rain" class="input100" type="number" name="rain" placeholder="Rainfall in mm">
+                            <span class="focus-input100"></span>
+                        </div>
+        
+                        <label class="label-input100" for="">Date *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="depth" class="input100" type="date" name="depth" placeholder="depth of borewell in feet">
+                            <span class="focus-input100"></span>
+                        </div>
 
-            <div class="col-xl-8 col-lg-7">
+                        <label class="label-input100" for="">time *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="time" class="input100" type="time" name="time" placeholder="depth of borewell in feet">
+                            <span class="focus-input100"></span>
+                        </div>
 
-              <!-- Borewell Chart -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Borewell Chart</h6>
+                        <label class="label-input100" for="message">Message *</label>
+                        <div class="wrap-input100 validate-input">
+                            <textarea id="message" class="input100" name="message" placeholder="Please enter your comments..."></textarea>
+                            <span class="focus-input100"></span>
+                        </div>
+        
+                        <div class="container-contact100-form-btn">
+                            <button class="contact100-form-btn">
+                                <span>
+                                    Submit
+                                
+                                </span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
-                  </div>
-                </div>
-              </div>
-
-               <!-- Rainfall Chart -->
-               <div class="card shadow mb-5">
-                  <div class="card-header py-4">
-                    <h6 class="m-0 font-weight-bold text-primary">Rainfall Data</h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-area">
-                      <div id="chartContainer"></div>
-                      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-                    </div>
-                  </div>
-                </div>
-
-              <!-- Bar Chart -->
-              <div class="card shadow mb-5">
-                <div class="card-header py-4">
-                  <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
-                </div>
-                <div class="card-body">
-                  <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
-                  </div>
-                </div>
-              </div>
-
             </div>
+        
+        
+        
+            <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+            <script src="vendor/animsition/js/animsition.min.js"></script>
+            <script src="vendor/bootstrap/js/popper.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+            <script src="vendor/select2/select2.min.js"></script>
+            <script src="vendor/daterangepicker/moment.min.js"></script>
+            <script src="vendor/daterangepicker/daterangepicker.js"></script>
+            <script src="vendor/countdowntime/countdowntime.js"></script>
+        
+            <script src="js/main.js"></script>
+        
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        
 
-
-            <!-- Donut Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Donut Chart</h6>
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-          </div>
-
-        </div>
         <!-- /.container-fluid -->
 
       </div>
@@ -711,7 +737,7 @@ function filterFunction() {
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Mahabhujal.in 2019</span>
           </div>
         </div>
       </footer>
@@ -758,15 +784,11 @@ function filterFunction() {
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="js/demo/chart-bar-demo.js"></script>
-  <script src="js/demo/chart-bar-rainfall.js"></script>
-
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
