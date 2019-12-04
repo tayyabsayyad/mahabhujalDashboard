@@ -39,9 +39,41 @@
         <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+        
 
 
       </ul>
+      <form action="login.html" >
+        <button type="submit" value="submit" style="float:left">SIGN IN</button>
+     </form>
+     <form action="register.html" margin-left: auto>
+      <button type="submit" value="submit">SIGN UP</button>
+   </form>
+   <div id='nav'> 
+    <? php
+    
+    if(is_logged_in())
+    {
+        if(is_admin())
+        {
+            echo anchor('admin','Admin Dashboard');
+        }
+    
+        echo anchor('user/logout','Logout');
+        echo anchor('users/profile','Profile' . '&nbsp;[' . $_SESSION['user_name'] . ']');
+    
+    }
+    else
+    {
+        echo anchor('user/login','Login');
+        echo anchor('user/signup','Signup');                        
+    }
+    
+    echo '&nbsp;' . anchor(base_url(),'Home');
+    ?>
+    
+    </div>
+
     </div>
   </div>
   <!-- Nav Item - Pages Collapse Menu -->
@@ -98,21 +130,7 @@
         Interface
       </div>
 
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Settings</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Admin:</h6>
-            <a class="collapse-item" href="#">Mail Server Settings</a>
-            <a class="collapse-item" href="#">Records</a>
-            <a class="collapse-item" href="#">Approval</a>
-          </div>
-        </div>
-      </li>
+      
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <!--
