@@ -318,12 +318,12 @@
                     </div>
                     </form>
                     <!-- ample single danger button -->
-                     <form>
                     <div class="btn-group">
-                    <button type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Village
                     </button>
-                    <div class="dropdown-menu">
+                    <div id="myDropdown" class="dropdown-menu">
+                      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a class="dropdown-item" href ="#">Ambehol</a>
           <a class="dropdown-item" href ="#">Ambejawalga</a>
           <a class="dropdown-item" href ="#">Ambewadi</a>
