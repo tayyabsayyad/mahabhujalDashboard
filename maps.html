@@ -27,33 +27,36 @@
 
   <head>
     <title> Maps </title>
-    <><>
+
   </head>
 
 <!-- NAVBAR-->
-<nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm">
-    <div class="container">
-      <a href="#" class="navbar-brand">
-        <!-- Logo Image -->
-        <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
-        <!-- Logo Text -->
-        <span class="text-uppercase font-weight-bold">Company</span>
-      </a>
+<nav class="navbar navbar-expand-lg py-3 navbar-light bg-gradient-primary shadow-sm">
+  <div class="container">
+    <a href="#" class="navbar-brand">
+      <!-- Logo Image -->
+      <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+      <!-- Logo Text -->
+      <span class="text-uppercase font-weight-bold">Mahabhujal</span>
+    </a>
 
-      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
 
-      <div id="navbarSupportedContent" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Aqufier Mapping</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Demand Analysis</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Runoff</a></li>
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="aquifer.html" class="nav-link">Aqufier Mapping</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Demand Analysis</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Runoff</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
 
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
+
+      </ul>
     </div>
+  </div>
     <!-- Nav Item - Pages Collapse Menu -->
     <!--<li class="nav-item">
      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -260,6 +263,45 @@
             </div>
           </form>
 
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              District
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Osmanabad</a>
+              <a class="dropdown-item" href="#">Pune</a>
+              <a class="dropdown-item" href="#">Satara</a>
+
+        </div>
+
+        <!-- Example single danger button -->
+        <form>
+        <div class="btn-group">
+        <button type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Taluka
+        </button>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Latur</a>
+        <a class="dropdown-item" href="#">Nagpur</a>
+        <a class="dropdown-item" href="#">Marathavada</a>
+
+        </div>
+        </form>
+        <!-- ample single danger button -->
+         <form>
+        <div class="btn-group">
+        <button type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Village
+        </button>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Yedshi</a>
+        <a class="dropdown-item" href="#">Narayangao</a>
+        <a class="dropdown-item" href="#">Ambegao</a>
+
+        </div>
+        </form>
+
+
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
@@ -428,23 +470,10 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-4 text-gray-800">Maps </h1>
-          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a href="#" class="nav-link">Watershed <span class="sr-only">(current)</span></a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Soil</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Rain</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Tree</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Runoff</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Sensex</a></li>
+          <!-- NAVBAR-->
 
 
-              <li class="nav-item"><a href="#" class="nav-link">Land use</a></li>
-            </ul>
-          </div>
-
-          <!-- Map Code-->
+          <!--Map Code-->
           <div id="mapid" class="parent" style="width: 1600px; height: 700px;"></div>
 
             <script type="text/javascript">
@@ -465,6 +494,12 @@
                   center: [18.319406, 75.968962],
 		              zoom: 14
             		}),
+                Aquifers: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+                  layers: 'groundwater:aquifer',
+                  opacity: 0.5,
+                  center: [18.319406, 75.968962],
+                  zoom: 14
+                }),
 
             	Schools : L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
             			layers: 'groundwater:onlyOsmanabad_schools',
