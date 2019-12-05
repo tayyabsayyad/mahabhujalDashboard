@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+  <style>
+    .dropdown-menu {
+      width: 50%;
+    }
+
+    .scrollable-menu {
+      height: auto;
+      max-height: 200px;
+      overflow-x: hidden;
+    }
+  </style>
   <script>
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -337,7 +348,7 @@ function filterFunction() {
                     <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Village
                     </button>
-                    <div id="myDropdown" class="dropdown-menu">
+                    <div id="myDropdown" class="dropdown-menu scrollable-menu">
                       <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a class="dropdown-item" href ="#">Ambehol</a>
           <a class="dropdown-item" href ="#">Ambejawalga</a>

@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+  <style>
+    .dropdown-menu {
+      width: 50%;
+    }
+
+    .scrollable-menu {
+      height: auto;
+      max-height: 200px;
+      overflow-x: hidden;
+    }
+  </style>
   <script>
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -348,7 +359,7 @@ function filterFunction() {
                     <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Village
                     </button>
-                    <div id="myDropdown" class="dropdown-menu">
+                    <div id="myDropdown" class="dropdown-menu scrollable-menu">
                       <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a class="dropdown-item" href ="#">Ambehol</a>
           <a class="dropdown-item" href ="#">Ambejawalga</a>
@@ -647,18 +658,18 @@ function filterFunction() {
 
         <!-- Begin Page Content -->
 
-       
 
 
-       
-       
+
+
+
         <div class="container-contact100">
                 <div class="wrap-contact100">
                     <form class="contact100-form validate-form">
                         <span class="contact100-form-title">
                              BoreWell Data Collection
                         </span>
-        
+
                         <label class="label-input100" for="first-name">Owner's Name *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
@@ -668,84 +679,87 @@ function filterFunction() {
                         <input class="input100" type="text" name="last-name" placeholder="Last name">
                             <span class="focus-input100"></span>
                         </div>
-        
+
                         <label class="label-input100" for="location">Location *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="text" class="input100" type="text" name="location" placeholder="Enter your location">
                             <span class="focus-input100"></span>
-                        
+
                         </div>
                         <label class="label-input100" for="">Water Level *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="water-level" class="input100" type="number" name="water-level" placeholder="Water level in borewell">
                             <span class="focus-input100"></span>
                         </div>
-        
+
                         <label class="label-input100" for="">Depth *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="depth" class="input100" type="number" name="depth" placeholder="depth of borewell in feet">
                             <span class="focus-input100"></span>
                         </div>
-        
+
                         <label class="label-input100" for="">Status *</label>
-                        <div class="wrap-input100 rs1 validate-input">
-                            <input id="depth" class="input100" type="text" name="depth" placeholder="on or off">
-                            <span class="focus-input100"></span>
-                        </div>
-        
-                        
-        
+
+                          <!-- Rounded switch -->
+                      <label class="switch">
+                        <input type="checkbox">
+                   <span class="slider round"></span>
+                     </label>
+
+
+
+
                         <label class="label-input100" for="">duration *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="usage" class="input100" type="number" name="usage" placeholder="eg. borewell is use for 2hrs ">
                             <span class="focus-input100"></span>
                         </div>
-        
-                    
+
+
                         <label class="label-input100" for="">category *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="category" class="input100" type="text" name="category" placeholder="eg. use for drinking ">
                             <span class="focus-input100"></span>
                         </div>
-        
+
                         <label class="label-input100" for="">Water Quality *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="Quality" class="input100" type="text" name="Quality" placeholder="eg. poor,good,excellent etc. ">
                             <span class="focus-input100"></span>
                         </div>
-        
+
                         <label class="label-input100" for="">Number of Dependent *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="ppl" class="input100" type="number" name="ppl" placeholder="How many people use this">
                             <span class="focus-input100"></span>
                         </div>
-        
+
                         <label class="label-input100" for="">Pumping *</label>
                         <div class="wrap-input100 rs1 validate-input">
                             <input id="ppl" class="input100" type="number" name="ppl" placeholder="Water pumped daily">
                             <span class="focus-input100"></span>
                         </div>
-        
+
                         <label class="label-input100" for="message">Message *</label>
                         <div class="wrap-input100 validate-input">
                             <textarea id="message" class="input100" name="message" placeholder="Please enter your comments..."></textarea>
                             <span class="focus-input100"></span>
                         </div>
-        
+
                         <div class="container-contact100-form-btn">
                             <button class="contact100-form-btn">
                                 <span>
                                     Submit
-                                
+
                                 </span>
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
-        
-        
-        
+
+
+
             <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
             <script src="vendor/animsition/js/animsition.min.js"></script>
             <script src="vendor/bootstrap/js/popper.js"></script>
@@ -754,13 +768,13 @@ function filterFunction() {
             <script src="vendor/daterangepicker/moment.min.js"></script>
             <script src="vendor/daterangepicker/daterangepicker.js"></script>
             <script src="vendor/countdowntime/countdowntime.js"></script>
-        
+
             <script src="js/main.js"></script>
-        
-        
+
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-        
+
 
         <!-- /.container-fluid -->
 
