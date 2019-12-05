@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+  <style>
+    .dropdown-menu {
+      width: 50%;
+    }
+
+    .scrollable-menu {
+      height: auto;
+      max-height: 200px;
+      overflow-x: hidden;
+    }
+  </style>
   <script>
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -61,14 +72,13 @@ function filterFunction() {
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="aquifer.html" class="nav-link">Aqufier Mapping</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Demand Analysis</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Runoff</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+        <li class="nav-item"><a href="demandanalysis.html" class="nav-link">Demand Analysis</a></li>
+        <li class="nav-item"><a href="runoff.html" class="nav-link">Runoff</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-
 
       </ul>
     </div>
@@ -145,25 +155,32 @@ function filterFunction() {
 
        <!-- Nav Item - BoreWell -->
        <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="borewellForm.html">
             <i class="fas fa-upload"></i>
             <span>Borewell</span></a>
         </li>
 
          <!-- Nav Item - Rainfall -->
        <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="rainfallForm.html">
             <i class="fas fa-spinner"></i>
             <span>Rainfall</span></a>
         </li>
 
          <!-- Nav Item - Water Level -->
        <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="waterLevelForm.html">
             <i class="fa fa-plus-square"></i>
             <span>Water Level</span></a>
         </li>
 
+
+          <!-- Nav Item - Trees -->
+            <li class="nav-item">
+                    <a class="nav-link" href="treesForm.html">
+                    <i class="fa fa-tree"></i>
+                    <span>Trees</span></a>
+                </li>
 
 
 
@@ -330,7 +347,7 @@ function filterFunction() {
                     <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Village
                     </button>
-                    <div id="myDropdown" class="dropdown-menu">
+                    <div id="myDropdown" class="dropdown-menu scrollable-menu">
                       <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a class="dropdown-item" href ="#">Ambehol</a>
           <a class="dropdown-item" href ="#">Ambejawalga</a>
@@ -644,63 +661,43 @@ function filterFunction() {
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead onloadedmetadata="Rainfall(mm)">
                     <tr>
-                      <th>jan</th>
+                      <th>mm</th>
                       <th>location</th>
-                      <th>depth</th>
-                      <th>level of water</th>
-                      <th>usage</th>
-                      <th>categeory</th>
-                      <th>status</th>
-                      <th>water quality</th>
-                      <th>duration of pumping </th>
-                      <th>no of people</th>
+                      <th>Volunteer name</th>
+                      <th>date</th>
+                      <th>time</th>
+
 
 
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>owner name</th>
-                      <th>location</th>
-                      <th>depth</th>
-                      <th>level of water</th>
-                      <th>usage</th>
-                      <th>categeory</th>
-                      <th>status</th>
-                      <th>water quality</th>
-                      <th>duration of pumping </th>
-                      <th>no of people</th>
+                      <th>32 mm</th>
+                      <th>shree nagar</th>
+                      <th>sneha</th>
+                      <th>5 dec</th>
+                      <th>8 am</th>
+
 
                     </tr>
                   </tfoot>
                   <tbody>
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>osmd</td>
-                      <td>15</td>
-                      <td>100</td>
-                      <td>residential</td>
-                      <td>daily</td>
-                      <td>on</td>
-                      <td>good</td>
-                      <td>5 months</td>
-                      <td>4</td>
-
+                      <th>30 mm</th>
+                      <th>shanti nagar</th>
+                      <th>sriya</th>
+                      <th>5 dec</th>
+                      <th>10 am</th>
 
 
                     </tr>
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>osmd</td>
-                      <td>15</td>
-                      <td>100</td>
-                      <td>residential</td>
-                      <td>daily</td>
-                      <td>on</td>
-                      <td>good</td>
-                      <td>5 months</td>
-                      <td>4</td>
-
+                      <th>36 mm</th>
+                      <th>vaishali nagar</th>
+                      <th>riya</th>
+                      <th>5 dec</th>
+                      <th>11 am</th>
                     </tr>
 
                   </tbody>

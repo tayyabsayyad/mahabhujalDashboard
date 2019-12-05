@@ -44,6 +44,17 @@ function filterFunction() {
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <style>
+    .dropdown-menu {
+      width: 50%;
+    }
+
+    .scrollable-menu {
+      height: auto;
+      max-height: 200px;
+      overflow-x: hidden;
+    }
+  </style>
 
 </head>
 
@@ -61,14 +72,13 @@ function filterFunction() {
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="aquifer.html" class="nav-link">Aqufier Mapping</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Demand Analysis</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Runoff</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+        <li class="nav-item"><a href="demandanalysis.html" class="nav-link">Demand Analysis</a></li>
+        <li class="nav-item"><a href="runoff.html" class="nav-link">Runoff</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-
 
       </ul>
     </div>
@@ -145,25 +155,32 @@ function filterFunction() {
 
        <!-- Nav Item - BoreWell -->
        <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="borewellForm.html">
             <i class="fas fa-upload"></i>
             <span>Borewell</span></a>
         </li>
 
          <!-- Nav Item - Rainfall -->
        <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="rainfallForm.html">
             <i class="fas fa-spinner"></i>
             <span>Rainfall</span></a>
         </li>
 
-         <!-- Nav Item - Water Level -->
-       <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fa fa-plus-square"></i>
-            <span>Water Level</span></a>
-        </li>
+        <!-- Nav Item - Water Level -->
+        <li class="nav-item">
+            <a class="nav-link" href="waterLevelForm.html">
+              <i class="fa fa-plus-square"></i>
+              <span>Water Level</span></a>
+          </li>
 
+
+            <!-- Nav Item - Trees -->
+              <li class="nav-item">
+                      <a class="nav-link" href="treesForm.html">
+                      <i class="fa fa-tree"></i>
+                      <span>Trees</span></a>
+                  </li>
 
 
 
@@ -330,7 +347,7 @@ function filterFunction() {
                     <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Village
                     </button>
-                    <div id="myDropdown" class="dropdown-menu">
+                    <div id="myDropdown" class="dropdown-menu scrollable-menu">
                       <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a class="dropdown-item" href ="#">Ambehol</a>
           <a class="dropdown-item" href ="#">Ambejawalga</a>
@@ -461,7 +478,7 @@ function filterFunction() {
           <a class="dropdown-item" href ="#">Zaregaon</a>
 
             </div>
-                    </form>
+
 
 
           <!-- Topbar Navbar -->
@@ -628,8 +645,28 @@ function filterFunction() {
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-2 text-gray-800">Ground Water Recharge Area</h1>
+          <!-- Content Row -->
+          <div class="row">
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-5">
+
+
+              <img width="80%" height="60%" src="img/Recharge_Priority_area_map.jpg" alt="Ground Water Recharge Area">
+</div>
+              <!-- Borewell Chart -->
+
+
+
+
+
 
         <!-- /.container-fluid -->
+
 
       </div>
       <!-- End of Main Content -->

@@ -2,6 +2,31 @@
 <html lang="en">
 
 <head>
+  <style>
+    .dropdown-menu {
+      width: 50%;
+    }
+
+    .scrollable-menu {
+      height: auto;
+      max-height: 200px;
+      overflow-x: hidden;
+    }
+    .map-container{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  }
+  .map-container iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
+
+  </style>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,12 +94,12 @@
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="aquifer.html" class="nav-link">Aqufier Mapping</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Demand Analysis</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Runoff</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
+        <li class="nav-item"><a href="demandanalysis.html" class="nav-link">Demand Analysis</a></li>
+        <li class="nav-item"><a href="runoff.html" class="nav-link">Runoff</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
 
 
@@ -169,23 +194,30 @@
 
         <!-- Nav Item - BoreWell -->
  <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="borewellForm.html">
       <i class="fas fa-upload"></i>
       <span>Borewell</span></a>
   </li>
 
    <!-- Nav Item - Rainfall -->
  <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="rainfallForm.html">
       <i class="fas fa-spinner"></i>
       <span>Rainfall</span></a>
   </li>
 
    <!-- Nav Item - Water Level -->
  <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="waterLevelForm.html">
       <i class="fa fa-plus-square"></i>
       <span>Water Level</span></a>
+  </li>
+
+  <!-- Nav Item - Water Level -->
+ <li class="nav-item">
+    <a class="nav-link" href="treesForm.html">
+      <i class="fa fa-tree"></i>
+      <span>Trees</span></a>
   </li>
 
 
@@ -232,6 +264,14 @@
             <i class="fas fa-map"></i>
             <span>Maps</span></a>
         </li>
+
+
+
+
+       <!-- Bootstrap Button Classes -->
+
+
+
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -330,7 +370,7 @@
                     <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Village
                     </button>
-                    <div id="myDropdown" class="dropdown-menu">
+                    <div id="myDropdown" class="dropdown-menu scrollable-menu">
                       <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a class="dropdown-item" href ="#">Ambehol</a>
           <a class="dropdown-item" href ="#">Ambejawalga</a>
@@ -632,12 +672,23 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Maps </h1>
+          <h1 class="h3 mb-4 text-gray-800">Maps
+
+
+            <button type="button" class="btn btn-primary">Runoff</button>
+            <button type="button" class="btn btn-primary">Recharge Structure</button>
+            <button type="button" class="btn btn-primary">Borewell</button>
+            <button type="button" class="btn btn-primary">Rain</button>
+            <button type="button" class="btn btn-primary">Soil</button>
+            <button type="button" class="btn btn-primary">Aquifer</button>
+            <button type="button" class="btn btn-primary">Landuse</button>
+
+          </h1>
           <!-- NAVBAR-->
 
 
           <!--Map Code-->
-          <div id="mapid" class="parent" style="width: 1600px; height: 700px;"></div>
+          <div id="mapid" class="parent" style="height: 500px"></div>
 
             <script type="text/javascript">
 
@@ -739,6 +790,10 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
 
 </body>
 
