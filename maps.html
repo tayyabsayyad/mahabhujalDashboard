@@ -12,6 +12,20 @@
       max-height: 200px;
       overflow-x: hidden;
     }
+    .map-container{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  }
+  .map-container iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
+
   </style>
 
   <meta charset="utf-8">
@@ -264,6 +278,14 @@
             <i class="fas fa-map"></i>
             <span>Maps</span></a>
         </li>
+
+
+
+
+       <!-- Bootstrap Button Classes -->
+
+
+
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
@@ -664,12 +686,23 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Maps </h1>
+          <h1 class="h3 mb-4 text-gray-800">Maps
+
+
+            <button type="button" class="btn btn-primary">Runoff</button>
+            <button type="button" class="btn btn-primary">Recharge Structure</button>
+            <button type="button" class="btn btn-primary">Borewell</button>
+            <button type="button" class="btn btn-primary">Rain</button>
+            <button type="button" class="btn btn-primary">Soil</button>
+            <button type="button" class="btn btn-primary">Aquifer</button>
+            <button type="button" class="btn btn-primary">Landuse</button>
+
+          </h1>
           <!-- NAVBAR-->
 
 
           <!--Map Code-->
-          <div id="mapid" class="parent" style="width: 1600px; height: 700px;"></div>
+          <div id="mapid" class="parent" style="height: 500px"></div>
 
             <script type="text/javascript">
 
@@ -771,6 +804,10 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
 
 </body>
 
