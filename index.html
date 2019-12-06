@@ -75,42 +75,14 @@ for (i = 0; i < a.length; i++) {
         <li class="nav-item"><a href="demandanalysis.html" class="nav-link">Demand Analysis</a></li>
         <li class="nav-item"><a href="runoff.html" class="nav-link">Runoff</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
         <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
         
 
 
       </ul>
-      <form action="login.html" >
-        <button type="submit" value="submit" style="float:left">SIGN IN</button>
-     </form>
-     <form action="register.html" margin-left: auto>
-      <button type="submit" value="submit">SIGN UP</button>
-   </form>
-   <div id='nav'> 
-    <? php
-    
-    if(is_logged_in())
-    {
-        if(is_admin())
-        {
-            echo anchor('admin','Admin Dashboard');
-        }
-    
-        echo anchor('user/logout','Logout');
-        echo anchor('users/profile','Profile' . '&nbsp;[' . $_SESSION['user_name'] . ']');
-    
-    }
-    else
-    {
-        echo anchor('user/login','Login');
-        echo anchor('user/signup','Signup');                        
-    }
-    
-    echo '&nbsp;' . anchor(base_url(),'Home');
-    ?>
-    
-    </div>
+      
 
     </div>
   </div>
@@ -679,6 +651,17 @@ for (i = 0; i < a.length; i++) {
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Settings
                 </a>
+                    
+                <a class="dropdown-item" href="#">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Admin Settings
+                  </a>
+                  <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Mail Server Settings</a>
+                      <a class="dropdown-item" href="#">Records</a>
+                      <a class="dropdown-item" href="#">Approvals</a>
+                
+                      </div>
                 <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                   Activity Log
