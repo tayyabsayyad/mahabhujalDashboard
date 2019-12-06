@@ -56,6 +56,12 @@ function filterFunction() {
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+
+  <!-- For Leaflet Maps -->
+  <link href="vendor/leaflet/leaflet.css" rel="stylesheet">
+  <script src="vendor/leaflet/leaflet.js"></script>
+
+
 </head>
 
 <nav class="navbar navbar-expand-lg py-3 navbar-light bg-gradient-primary shadow-sm">
@@ -651,6 +657,9 @@ function filterFunction() {
           <h1 class="h3 mb-2 text-gray-800">Tables</h1>
           <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
 
+
+          <div id="mapid" class="parent" style="height: 500px"></div>
+
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -708,8 +717,55 @@ function filterFunction() {
 
         </div>
         <!-- /.container-fluid -->
-
       </div>
+
+      <!--Map Code-->
+
+        <script type="text/javascript">
+
+          var mymap = L.map('mapid').setView([18.319406, 75.968962], 14);
+          L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+              '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+              'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11'
+          }).addTo(mymap);
+
+          var basemaps = {
+            Borewells: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+              layers: 'groundwater:borewell_borewell',
+              opacity: 0.5,
+              center: [18.319406, 75.968962],
+              zoom: 14
+            }),
+            Aquifers: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+              layers: 'groundwater:aquifer',
+              opacity: 0.5,
+              center: [18.319406, 75.968962],
+              zoom: 14
+            }),
+
+          Schools : L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+              layers: 'groundwater:onlyOsmanabad_schools',
+                opacity: 0.5,
+                center: [18.319406, 75.968962],
+                zoom: 14
+            }),
+
+          Census: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+              layers: 'groundwater:osmanabad',
+              opacity: 0.5,
+              center: [18.319406, 75.968962],
+              zoom: 14
+            })
+          };
+
+          L.control.layers(basemaps, {}, {collapsed: false}).addTo(mymap);
+          basemaps.Census.addTo(mymap);
+
+        </script>
+
       <!-- End of Main Content -->
 
       <!-- Footer -->
