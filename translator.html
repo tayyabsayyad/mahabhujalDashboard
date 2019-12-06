@@ -27,14 +27,13 @@ function filterFunction() {
 
   </script>
 
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Borewell Data Collection</title>
+  <title>SB Admin 2 - Tables</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -45,18 +44,6 @@ function filterFunction() {
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
-
-  <link rel="stylesheet" type="text/css" href="vendor/bootstrap-form/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 
@@ -158,7 +145,7 @@ function filterFunction() {
 
        <!-- Nav Item - BoreWell -->
        <li class="nav-item">
-          <a class="nav-link" href="borewellForm.html">
+          <a class="nav-link" href="#">
             <i class="fas fa-upload"></i>
             <span>Borewell</span></a>
         </li>
@@ -172,18 +159,13 @@ function filterFunction() {
 
          <!-- Nav Item - Water Level -->
        <li class="nav-item">
-          <a class="nav-link" href="waterLevelForm.html">
+          <a class="nav-link" href="#">
             <i class="fa fa-plus-square"></i>
             <span>Water Level</span></a>
         </li>
 
 
-          <!-- Nav Item - Trees -->
-            <li class="nav-item">
-                    <a class="nav-link" href="treesForm.html">
-                    <i class="fa fa-tree"></i>
-                    <span>Trees</span></a>
-                </li>
+
 
 
 
@@ -268,6 +250,7 @@ function filterFunction() {
 
       <!-- Main Content -->
       <div id="content">
+        
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -647,94 +630,6 @@ function filterFunction() {
 
         <!-- Begin Page Content -->
 
-        <div class="card shadow mb-5">
-          <div class="card-header py-4">
-            <h6 class="m-0 font-weight-bold text-primary">Tree Stasts </h6>
-          </div>
-          <div class="card-body">
-            <div class="chart-bar">
-              <canvas id="myBarTreeChart"></canvas>
-            </div>
-          </div>
-        </div>
-
-        <div class="container-contact100">
-                <div class="wrap-contact100">
-                    <form class="contact100-form validate-form">
-                        <span class="contact100-form-title">
-                             Trees Data Collection
-                        </span>
-
-                        <label class="label-input100" for="first-name">Owner's Name *</label>
-                        <div class="wrap-input100 rs1 validate-input">
-                            <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
-                            <span class="focus-input100"></span>
-                        </div>
-                        <div class="wrap-input100 rs1 validate-input">
-                        <input class="input100" type="text" name="last-name" placeholder="Last name">
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <label class="label-input100" for="location">Location *</label>
-                        <div class="wrap-input100 rs1 validate-input">
-                            <input id="text" class="input100" type="text" name="location" placeholder="Enter your location">
-                            <span class="focus-input100"></span>
-
-                        </div>
-                        <label class="label-input100" for="">Category *</label>
-                        <div class="wrap-input100 rs1 validate-input">
-                            <input id="cat" class="input100" type="text" name="cat" placeholder="eg, Mango Tree">
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <label class="label-input100" for="">Date *</label>
-                        <div class="wrap-input100 rs1 validate-input">
-                            <input id="date" class="input100" type="date" name="depth" placeholder="date of birth">
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <label class="label-input100" for="">time *</label>
-                        <div class="wrap-input100 rs1 validate-input">
-                            <input id="time" class="input100" type="time" name="time" placeholder="time of birth">
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <label class="label-input100" for="message">Message *</label>
-                        <div class="wrap-input100 validate-input">
-                            <textarea id="message" class="input100" name="message" placeholder="Please enter your comments..."></textarea>
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <div class="container-contact100-form-btn">
-                            <button class="contact100-form-btn">
-                                <span>
-                                    Submit
-
-                                </span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-
-
-            <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-            <script src="vendor/animsition/js/animsition.min.js"></script>
-            <script src="vendor/bootstrap/js/popper.js"></script>
-            <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-            <script src="vendor/select2/select2.min.js"></script>
-            <script src="vendor/daterangepicker/moment.min.js"></script>
-            <script src="vendor/daterangepicker/daterangepicker.js"></script>
-            <script src="vendor/countdowntime/countdowntime.js"></script>
-
-            <script src="js/main.js"></script>
-
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-
-
         <!-- /.container-fluid -->
 
       </div>
@@ -744,7 +639,7 @@ function filterFunction() {
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Mahabhujal.in 2019</span>
+            <span>Copyright &copy; Your Website 2019</span>
           </div>
         </div>
       </footer>
@@ -796,16 +691,6 @@ function filterFunction() {
 
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
-
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="js/demo/chart-bar-tree-demo.js"></script>
-
-  <script src="js/demo/chart-bar-rainfall.js"></script>
 
 </body>
 
