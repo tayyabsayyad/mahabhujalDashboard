@@ -25,6 +25,7 @@ function filterFunction() {
   }
 }
 
+
   </script>
 
   <meta charset="utf-8">
@@ -44,6 +45,13 @@ function filterFunction() {
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+   <!-- For Leaflet Maps -->
+   <link href="vendor/leaflet/leaflet.css" rel="stylesheet">
+   <script src="vendor/leaflet/leaflet.js"></script>
+ 
+   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+   <script src="vendor/leaflet/L.TileLayer.BetterWMS.js"></script>
+ 
   <style>
     .dropdown-menu {
       width: 50%;
@@ -54,6 +62,31 @@ function filterFunction() {
       max-height: 200px;
       overflow-x: hidden;
     }
+
+ /* Styling for maps */ 
+    .dropdown-menu {      
+      width: 50%;
+    }
+
+    .scrollable-menu {
+      height: auto;
+      max-height: 200px;
+      overflow-x: hidden;
+    }
+    .map-container{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  }
+  .map-container iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
+
   </style>
 
 </head>
@@ -637,8 +670,60 @@ function filterFunction() {
 
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-          <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
+          <div>
+          <h1 class="h3 mb-2 text-gray-800">Mahabhujal - Participatory Ground Water Management Maps, Analysis and Tables</h1>
+          <p class="mb-4">Enter Location and view on maps with their respactive data in tables...</p>
+          <a href="borewellForm.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Add Data</a>
+</div>
+
+          <!--Map Code-->
+          <div id="mapid" class="parent" style="height: 500px"></div>
+
+            <script type="text/javascript">
+
+              var mymap = L.map('mapid').setView([18.319406, 75.968962], 14);
+              L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 18,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                  '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                  'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                id: 'mapbox/streets-v11'
+              }).addTo(mymap);
+
+              var basemaps = {
+            		Borewells: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+            			layers: 'groundwater:borewell_borewell',
+                  opacity: 0.5,
+                  center: [18.319406, 75.968962],
+		              zoom: 14
+            		}),
+                Aquifers: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+                  layers: 'groundwater:aquifer',
+                  opacity: 0.5,
+                  center: [18.319406, 75.968962],
+                  zoom: 14
+                }),
+
+            	Schools : L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+            			layers: 'groundwater:onlyOsmanabad_schools',
+                    opacity: 0.5,
+                    center: [18.319406, 75.968962],
+  		              zoom: 14
+            		}),
+
+            	Census: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+            			layers: 'groundwater:osmanabad',
+                  opacity: 0.5,
+                  center: [18.319406, 75.968962],
+		              zoom: 14
+                })
+            	};
+
+              L.control.layers(basemaps, {}, {collapsed: false}).addTo(mymap);
+	            basemaps.Census.addTo(mymap);
+
+            </script>
+
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
@@ -713,6 +798,21 @@ function filterFunction() {
               </div>
             </div>
           </div>
+
+
+<!-- Borewell Chart -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Borewell Chart</h6>
+  </div>
+  <div class="card-body">
+    <div class="chart-area">
+      <canvas id="myAreaChart"></canvas>
+    </div>
+  </div>
+</div>
+
+
 
         </div>
         <!-- /.container-fluid -->
