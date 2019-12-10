@@ -13,6 +13,32 @@
       overflow-x: hidden;
     }
   </style>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script>
+  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+  </script>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,18 +46,46 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Blank</title>
+  <title>SB Admin 2 - Tables</title>
 
-  <!-- Custom fonts for this template-->
+  <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template-->
+  <!-- Custom styles for this template -->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
+<nav class="navbar navbar-expand-lg py-3 navbar-light bg-gradient-primary shadow-sm">
+  <div class="container">
+    <a href="#" class="navbar-brand">
+      <!-- Logo Image -->
+      <img src="https://res.cloudinary.com/mhmd/image/upload/v1557368579/logo_iqjuay.png" width="45" alt="" class="d-inline-block align-middle mr-2">
+      <!-- Logo Text -->
+      <span class="text-uppercase font-weight-bold">Mahabhujal</span>
+    </a>
+
+    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="aquifer.html" class="nav-link">Aqufier Mapping</a></li>
+        <li class="nav-item"><a href="demandanalysis.html" class="nav-link">Demand Analysis</a></li>
+        <li class="nav-item"><a href="runoff.html" class="nav-link">Runoff</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <body id="page-top">
 
@@ -41,19 +95,17 @@
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-      <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3"> Mahabhujal </sup></div>
       </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="index.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
@@ -71,49 +123,81 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
+          <span>Settings</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <h6 class="collapse-header">Admin:</h6>
+            <a class="collapse-item" href="#">Mail Server Settings</a>
+            <a class="collapse-item" href="#">Records</a>
+            <a class="collapse-item" href="#">Approval</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
+      <!--
+        <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
+          <span>Support Us</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
+            <h6 class="collapse-header">Surveys:</h6>
+            <a class="collapse-item" href="#">Borewells</a>
+            <a class="collapse-item" href="#">Rainfall</a>
             <a class="collapse-item" href="utilities-color.html">Colors</a>
             <a class="collapse-item" href="utilities-border.html">Borders</a>
             <a class="collapse-item" href="utilities-animation.html">Animations</a>
             <a class="collapse-item" href="utilities-other.html">Other</a>
           </div>
         </div>
-      </li>
+      </li> -->
+
+       <!-- Nav Item - BoreWell -->
+       <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-upload"></i>
+            <span>Borewell</span></a>
+        </li>
+
+         <!-- Nav Item - Rainfall -->
+       <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-spinner"></i>
+            <span>Rainfall</span></a>
+        </li>
+
+         <!-- Nav Item - Water Level -->
+       <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-plus-square"></i>
+            <span>Water Level</span></a>
+        </li>
+
+
+
+
+
+
+
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Addons
+        Analysis
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+      <!--<li class="nav-item">
+       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
           <span>Pages</span>
         </a>
-        <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
             <a class="collapse-item" href="login.html">Login</a>
@@ -122,10 +206,17 @@
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item active" href="blank.html">Blank Page</a>
+            <a class="collapse-item" href="blank.html">Blank Page</a>
           </div>
         </div>
-      </li>
+      </li>-->
+
+      <!-- Nav Item - Alerts -->
+      <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fas fa-bell"></i>
+            <span>Alerts</span></a>
+        </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
@@ -134,6 +225,7 @@
           <span>Charts</span></a>
       </li>
 
+      <!-- Nav Item - Tables -->
 
         <li class="nav-item">
           <a class="nav-link" href="tables.html">
@@ -145,6 +237,14 @@
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Rainfall</span></a>
         </li>
+
+
+      <!-- Nav Item - Maps -->
+      <li class="nav-item">
+        <a class="nav-link" href="maps.html">
+          <i class="fas fa-map"></i>
+          <span>Maps</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -162,292 +262,7 @@
 
       <!-- Main Content -->
       <div id="content">
-          <header class="cd-header flex flex-column flex-center">
-              <div class="text-component text-center">
-                <h1>FAQ Template</h1>
-
-              </div>
-            </header>
-
-            <section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
-              <ul class="cd-faq__categories">
-                <li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">Basics</a></li>
-                <li><a class="cd-faq__category truncate" href="#mobile">Mobile</a></li>
-                <li><a class="cd-faq__category truncate" href="#account">Account</a></li>
-                <li><a class="cd-faq__category truncate" href="#payments">Payments</a></li>
-          <li><a class="cd-faq__category truncate" href="#privacy">Privacy</a></li>
-          <li><a class="cd-faq__category truncate" href="#delivery">Delivery</a></li>
-        </ul> <!-- cd-faq__categories -->
-      <div class ="BASICS">
-        <div class="cd-faq__items">
-          <ul id="basics" class="cd-faq__group">
-            <li class="cd-faq__title"><h2>Basics</h2></li>
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do I change my password?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do I sign up?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>Can I remove a post?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur </p>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do reviews work?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-          </ul> <!-- cd-faq__group -->
-          </div>
-
-          <ul id="mobile" class="cd-faq__group">
-            <li class="cd-faq__title"><h2>Mobile</h2></li>
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How does syncing work?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do I upload files from my phone or tablet?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, nim</p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do I link to a file or folder?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-          </ul> <!-- cd-faq__group -->
-
-          <ul id="account" class="cd-faq__group">
-            <li class="cd-faq__title"><h2>Account</h2></li>
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do I change my password?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do I delete my account?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do I change my account settings?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>I forgot my password. How do I reset it?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-          </ul> <!-- cd-faq__group -->
-
-          <ul id="payments" class="cd-faq__group">
-            <li class="cd-faq__title"><h2>Payments</h2></li>
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>Can I have an invoice for my subscription?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>Why did my credit card or PayPal payment fail?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>Why does my bank statement show multiple charges for one upgrade?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-          </ul> <!-- cd-faq__group -->
-
-          <ul id="privacy" class="cd-faq__group">
-            <li class="cd-faq__title"><h2>Privacy</h2></li>
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>Can I specify my own private key?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>My files are missing! How do I get them back?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How can I access my account data?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How can I control if other search engines can link to my profile?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-          </ul> <!-- cd-faq__group -->
-
-          <ul id="delivery" class="cd-faq__group">
-            <li class="cd-faq__title"><h2>Delivery</h2></li>
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>What should I do if my order hasn't been delivered yet?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How can I find your international delivery information?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>Who takes care of shipping?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do returns or refunds work?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How do I use shipping profiles?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How does your UK Next Day Delivery service work?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>How does your Next Day Delivery service work?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>When will my order arrive?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-
-            <li class="cd-faq__item">
-              <a class="cd-faq__trigger" href="#0"><span>When will my order ship?</span></a>
-              <div class="cd-faq__content">
-                <div class="text-component">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-              </div> <!-- cd-faq__content -->
-            </li>
-          </ul> <!-- cd-faq__group -->
-        </div> <!-- cd-faq__items -->
-
-        <a href="#0" class="cd-faq__close-panel text-replace">Close</a>
-
-        <div class="cd-faq__overlay" aria-hidden="true"></div>
-      </section> <!-- cd-faq -->
-      <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
-      <script src="assets/js/main.js"></script>
+        
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -468,6 +283,199 @@
               </div>
             </div>
           </form>
+
+
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Region
+                        </button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Aurangabad</a>
+                          <a class="dropdown-item" href="#">Amravati</a>
+                          <a class="dropdown-item" href="#">Kokan</a>
+                          <a class="dropdown-item" href="#">Nashik</a>
+                          <a class="dropdown-item" href="#">Pune</a>
+                          <a class="dropdown-item" href="#">Nagpur</a>
+
+                      </div>
+                      <form>
+                      <div class="btn-group">
+                      <button type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      District
+                      </button>
+                      <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Osmanabad</a>
+                      <a class="dropdown-item" href="#">Beed</a>
+                      <a class="dropdown-item" href="#">Latur</a>
+                      <a class="dropdown-item" href="#">Hingoli</a>
+                      <a class="dropdown-item" href="#">Jalna</a>
+                      <a class="dropdown-item" href="#">Nanded</a>
+                      <a class="dropdown-item" href="#">Parabhani</a>
+
+
+                      </div>
+                      </form>
+
+                    <!-- Example single danger button -->
+                    <form>
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Taluka
+                    </button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Bhoom</a>
+                    <a class="dropdown-item" href="#">Kalamb</a>
+                    <a class="dropdown-item" href="#">Loghana</a>
+                    <a class="dropdown-item" href="#">Osmanabad</a>
+
+                    <a class="dropdown-item" href="#">Paranda</a>
+                    <a class="dropdown-item" href="#">Tuljapur</a>
+                    <a class="dropdown-item" href="#">Umerga</a>
+                    <a class="dropdown-item" href="#">Washi</a>
+
+
+
+
+                    </div>
+                    </form>
+                    <!-- ample single danger button -->
+                    <div class="btn-group">
+                    <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Village
+                    </button>
+                    <div id="myDropdown" class="dropdown-menu scrollable-menu">
+                      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a class="dropdown-item" href ="#">Ambehol</a>
+          <a class="dropdown-item" href ="#">Ambejawalga</a>
+          <a class="dropdown-item" href ="#">Ambewadi</a>
+          <a class="dropdown-item" href ="#">Ansurda</a>
+          <a class="dropdown-item" href ="#">Arni</a>
+          <a class="dropdown-item" href ="#">Bamani</a>
+          <a class="dropdown-item" href ="#">Baramgaon Bk.</a>
+          <a class="dropdown-item" href ="#">Baramgaon Kh.</a>
+          <a class="dropdown-item" href ="#">Bavi</a>
+          <a class="dropdown-item" href ="#">Bavi Dhoki</a>
+          <a class="dropdown-item" href ="#">Begada</a>
+          <a class="dropdown-item" href ="#">Bembli</a>
+          <a class="dropdown-item" href ="#">Bhadachiwadi</a>
+          <a class="dropdown-item" href ="#">Bhanasgaon</a>
+          <a class="dropdown-item" href ="#">Bhandari</a>
+          <a class="dropdown-item" href ="#">Bhandarwadi</a>
+          <a class="dropdown-item" href ="#">Bhikar Sarola</a>
+          <a class="dropdown-item" href ="#">Borgaon raje</a>
+          <a class="dropdown-item" href ="#">Borkheda</a>
+          <a class="dropdown-item" href ="#">Bukanwadi</a>
+          <a class="dropdown-item" href ="#">Chikhali</a>
+          <a class="dropdown-item" href ="#">Chilvadi</a>
+          <a class="dropdown-item" href ="#">Dakwadi</a>
+          <a class="dropdown-item" href ="#">Darphal</a>
+          <a class="dropdown-item" href ="#">Dautpur</a>
+          <a class="dropdown-item" href ="#">Deolali</a>
+          <a class="dropdown-item" href ="#">Dharur</a>
+          <a class="dropdown-item" href ="#">Dhoki</a>
+          <a class="dropdown-item" href ="#">Dhutta</a>
+          <a class="dropdown-item" href ="#">Dudhagaon</a>
+
+          <a class="dropdown-item" href ="#">Gad Deodari</a>
+          <a class="dropdown-item" href ="#">Gaosud</a>
+          <a class="dropdown-item" href ="#">Gaundgaon</a>
+          <a class="dropdown-item" href ="#">Ghatangri</a>
+          <a class="dropdown-item" href ="#">Ghogarewadi</a>
+          <a class="dropdown-item" href ="#">Ghuggi</a>
+          <a class="dropdown-item" href ="#">Gogaon</a>
+          <a class="dropdown-item" href ="#">Gopalwadi</a>
+          <a class="dropdown-item" href ="#">Gorewadi</a>
+          <a class="dropdown-item" href ="#">Govardhanwadi</a>
+          <a class="dropdown-item" href ="#">Hinglajwadi</a>
+          <a class="dropdown-item" href ="#">Irla</a>
+          <a class="dropdown-item" href ="#">Jagji</a>
+          <a class="dropdown-item" href ="#">Jahagirdarwadi</a>
+          <a class="dropdown-item" href ="#">Jawale Dumala</a>
+          <a class="dropdown-item" href ="#">Junoni</a>
+          <a class="dropdown-item" href ="#">Kajala</a>
+          <a class="dropdown-item" href ="#">Kakaspur</a>
+          <a class="dropdown-item" href ="#">Kamegaon</a>
+          <a class="dropdown-item" href ="#">Kanagara</a>
+          <a class="dropdown-item" href ="#">Karajkheda</a>
+          <a class="dropdown-item" href ="#">Kaudgaon</a>
+          <a class="dropdown-item" href ="#">Kaudgaon</a>
+          <a class="dropdown-item" href ="#">Kawaldara Tanda</a>
+          <a class="dropdown-item" href ="#">Kawalewadi</a>
+          <a class="dropdown-item" href ="#">Keshegaon</a>
+          <a class="dropdown-item" href ="#">Khamaswadi</a>
+          <a class="dropdown-item" href ="#">Khamgaon</a>
+          <a class="dropdown-item" href ="#">Khanapur</a>
+          <a class="dropdown-item" href ="#">Khed</a>
+          <a class="dropdown-item" href ="#">Kini</a>
+          <a class="dropdown-item" href ="#">Kolegaon</a>
+          <a class="dropdown-item" href ="#">Kolewadi</a>
+          <a class="dropdown-item" href ="#">Kombadwadi</a>
+          <a class="dropdown-item" href ="#">Kond</a>
+          <a class="dropdown-item" href ="#">Kumalwadi</a>
+          <a class="dropdown-item" href ="#">Lasona</a>
+          <a class="dropdown-item" href ="#">Mahadevwadi</a>
+          <a class="dropdown-item" href ="#">Mahalingi</a>
+          <a class="dropdown-item" href ="#">Medsinga</a>
+          <a class="dropdown-item" href ="#">Mendha</a>
+          <a class="dropdown-item" href ="#">Mohtarwadi</a>
+          <a class="dropdown-item" href ="#">Mulewadi</a>
+          <a class="dropdown-item" href ="#">Nandurga</a>
+          <a class="dropdown-item" href ="#">Nitali</a>
+          <a class="dropdown-item" href ="#">Padoli</a>
+          <a class="dropdown-item" href ="#">Palaswadi</a>
+          <a class="dropdown-item" href ="#">Palsap</a>
+          <a class="dropdown-item" href ="#">Panchgavhan</a>
+          <a class="dropdown-item" href ="#">Panwadi</a>
+          <a class="dropdown-item" href ="#">Patoda</a>
+          <a class="dropdown-item" href ="#">Pawarwadi</a>
+          <a class="dropdown-item" href ="#">Pimpri</a>
+          <a class="dropdown-item" href ="#">Pohner</a>
+          <a class="dropdown-item" href ="#">Rajuri</a>
+
+          <a class="dropdown-item" href ="#">Rui dhoki</a>
+          <a class="dropdown-item" href ="#">Ruibhar</a>
+          <a class="dropdown-item" href ="#">Sakanewadi</a>
+          <a class="dropdown-item" href ="#">Samba</a></a>
+          <a class="dropdown-item" href ="#">Samudrawan</a>
+          <a class="dropdown-item" href ="#">Sangvi</a>
+          <a class="dropdown-item" href ="#">Sanja</a>
+          <a class="dropdown-item" href ="#">Sarola Bk.</a>
+          <a class="dropdown-item" href ="#">Tadwala K.</a>
+          <a class="dropdown-item" href ="#">Shekapur</a>
+          <a class="dropdown-item" href ="#">Shingoli</a>
+          <a class="dropdown-item" href ="#">Sonegaon</a>
+          <a class="dropdown-item" href ="#">Ramwadi</a>
+          <a class="dropdown-item" href ="#">Takali Bembali</a>
+          <a class="dropdown-item" href ="#">Surdi</a>
+
+
+          <a class="dropdown-item" href ="#">Takali Dhoki</a>
+          <a class="dropdown-item" href ="#">Takwiki</a>
+          <a class="dropdown-item" href ="#">Tawaraj Kheda</a>
+          <a class="dropdown-item" href ="#">Ter</a>
+          <a class="dropdown-item" href ="#">Thodsarwadi</a>
+          <a class="dropdown-item" href ="#">Toramba</a>
+          <a class="dropdown-item" href ="#">Tugaon</a>
+          <a class="dropdown-item" href ="#">Umaregavhan</a>
+          <a class="dropdown-item" href ="#">Upla</a>
+          <a class="dropdown-item" href ="#">Uttami Kayapur</a>
+          <a class="dropdown-item" href ="#">Vitthalwadi</a>
+          <a class="dropdown-item" href ="#">Wadala</a>
+          <a class="dropdown-item" href ="#">Wadgaon</a>
+          <a class="dropdown-item" href ="#">Wadibamani</a>
+          <a class="dropdown-item" href ="#">Wagholi</a>
+          <a class="dropdown-item" href ="#">Wakharwadi</a>
+          <a class="dropdown-item" href ="#">Walgud</a>
+          <a class="dropdown-item" href ="#">Wanewadi</a>
+          <a class="dropdown-item" href ="#">Waruda</a>
+          <a class="dropdown-item" href ="#">Warwanti</a>
+          <a class="dropdown-item" href ="#">Yedsi</a>
+          <a class="dropdown-item" href ="#">Yeoti</a>
+          <a class="dropdown-item" href ="#">Zaregaon</a>
+
+            </div>
+                    </form>
+
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -633,13 +641,56 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
-
-        </div>
         <!-- /.container-fluid -->
+        <!-- Main Content -->
+      <div id="content">
+          <h1>FAQ Section</h1>
+          <div class="container">
+              <!-- Accordion Starts-->
+              <div class="acc">
+                <h3>Question 1: What is Mahabhujal?</h3>
+                <div class="content">
+                    <div class="content-inner">
+                        <p>Mahabhujal, is a rainwater goverance system which allows people's participation and contribution to groundwater resources and they will get to know their water status of their area. </p>
+                    </div>
+                </div>
+            </div>
+
+              <!-- Accordian -->
+              <div class="acc">
+                  <h3>Question 2: What is Aquifer ?</h3>
+                  <div class="content">
+                      <div class="content-inner">
+                          <p>An aquifer is an underground layer of water-bearing permeable rock, rock fractures or unconsolidated materials. Groundwater can be extracted using a water well. </p>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Accordian -->
+              <div class="acc">
+                  <h3>Question 3: What is Watershed?</h3>
+                  <div class="content">
+                      <div class="content-inner">
+                          <p>A drainage basin is any area of land where precipitation collects and drains off into a common outlet, such as into a river, bay, or other body of water.</p>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Accordian -->
+              <div class="acc">
+                  <h3>Question 4: What is Rain Water Harvesting?</h3>
+                  <div class="content">
+                      <div class="content-inner">
+                          <p>Rainwater harvesting is the accumulation and storage of rainwater for reuse on-site, rather than allowing it to run off. </p>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="faq.js"></script>
 
       </div>
       <!-- End of Main Content -->
@@ -693,6 +744,13 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 
