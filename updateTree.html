@@ -2,19 +2,6 @@
 <html lang="en">
 
 <head>
-  <style>
-    .dropdown-menu {
-      width: 50%;
-    }
-
-    .scrollable-menu {
-      height: auto;
-      max-height: 200px;
-      overflow-x: hidden;
-    }
-  </style>
-  <link rel="stylesheet" type="text/css" href="style.css">
-
   <script>
   /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -40,13 +27,14 @@ function filterFunction() {
 
   </script>
 
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Tables</title>
+  <title>Borewell Data Collection</title>
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -57,6 +45,18 @@ function filterFunction() {
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap-form/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
 
@@ -74,13 +74,14 @@ function filterFunction() {
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
         <li class="nav-item"><a href="aquifer.html" class="nav-link">Aqufier Mapping</a></li>
-        <li class="nav-item"><a href="demandanalysis.html" class="nav-link">Demand Analysis</a></li>
-        <li class="nav-item"><a href="runoff.html" class="nav-link">Runoff</a></li>
-        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Demand Analysis</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Runoff</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Register</a></li>
         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+
 
       </ul>
     </div>
@@ -157,7 +158,7 @@ function filterFunction() {
 
        <!-- Nav Item - BoreWell -->
        <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="borewellForm.html">
             <i class="fas fa-upload"></i>
             <span>Borewell</span></a>
         </li>
@@ -171,13 +172,18 @@ function filterFunction() {
 
          <!-- Nav Item - Water Level -->
        <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="waterLevelForm.html">
             <i class="fa fa-plus-square"></i>
             <span>Water Level</span></a>
         </li>
 
 
-
+          <!-- Nav Item - Trees -->
+            <li class="nav-item">
+                    <a class="nav-link" href="treesForm.html">
+                    <i class="fa fa-tree"></i>
+                    <span>Trees</span></a>
+                </li>
 
 
 
@@ -262,7 +268,6 @@ function filterFunction() {
 
       <!-- Main Content -->
       <div id="content">
-        
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -343,7 +348,7 @@ function filterFunction() {
                     <button onclick="myFunction()" type="button" class="btn btn-sm-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Village
                     </button>
-                    <div id="myDropdown" class="dropdown-menu scrollable-menu">
+                    <div id="myDropdown" class="dropdown-menu">
                       <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
           <a class="dropdown-item" href ="#">Ambehol</a>
           <a class="dropdown-item" href ="#">Ambejawalga</a>
@@ -642,55 +647,90 @@ function filterFunction() {
 
         <!-- Begin Page Content -->
 
-        <!-- /.container-fluid -->
-        <!-- Main Content -->
-      <div id="content">
-          <h1>FAQ</h1>
-          <div class="container">
-              <!-- Accordion Starts-->
-              <div class="acc">
-                <h3>What is Mahabhujal?</h3>
-                <div class="content">
-                    <div class="content-inner">
-                        <p>Mahabhujal, is a rainwater goverance system which allows people's participation and contribution to groundwater resources and they will get to know their water status of their area. </p>
-                    </div>
+        <div class="container-contact100">
+                <div class="wrap-contact100">
+                    <form class="contact100-form validate-form">
+                        <span class="contact100-form-title">
+                             Trees Data Collection
+                        </span>
+
+                        <label class="label-input100" for="first-name">Owner's Name *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="wrap-input100 rs1 validate-input">
+                        <input class="input100" type="text" name="last-name" placeholder="Last name">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <label class="label-input100" for="location">Location *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="text" class="input100" type="text" name="location" placeholder="Enter your location">
+                            <span class="focus-input100"></span>
+
+                        </div>
+                        <label class="label-input100" for="">Category *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="cat" class="input100" type="text" name="cat" placeholder="eg, Mango Tree">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <label class="label-input100" for="">Date *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="date" class="input100" type="date" name="depth" placeholder="date of birth">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <label class="label-input100" for="">time *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="time" class="input100" type="time" name="time" placeholder="time of birth">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <label class="label-input100" for="">update *</label>
+                        <div class="wrap-input100 rs1 validate-input">
+                            <input id="update" class="input100" type="text" name="update" placeholder="update height of trees">
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <label class="label-input100" for="message">Message *</label>
+                        <div class="wrap-input100 validate-input">
+                            <textarea id="message" class="input100" name="message" placeholder="Please enter your comments..."></textarea>
+                            <span class="focus-input100"></span>
+                        </div>
+
+                        <div class="container-contact100-form-btn">
+                            <button class="contact100-form-btn">
+                                <span>
+                                    Submit
+
+                                </span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
-              <!-- Accordian -->
-              <div class="acc">
-                  <h3>What is Aquifer ?</h3>
-                  <div class="content">
-                      <div class="content-inner">
-                          <p>An aquifer is an underground layer of water-bearing permeable rock, rock fractures or unconsolidated materials. Groundwater can be extracted using a water well. </p>
-                      </div>
-                  </div>
-              </div>
-      
-              <!-- Accordian -->
-              <div class="acc">
-                  <h3>What is Watershed?</h3>
-                  <div class="content">
-                      <div class="content-inner">
-                          <p>A drainage basin is any area of land where precipitation collects and drains off into a common outlet, such as into a river, bay, or other body of water.</p>
-                      </div>
-                  </div>
-              </div>
-      
-              <!-- Accordian -->
-              <div class="acc">
-                  <h3>What is Rain Water Harvesting?</h3>
-                  <div class="content">
-                      <div class="content-inner">
-                          <p>Rainwater harvesting is the accumulation and storage of rainwater for reuse on-site, rather than allowing it to run off. </p>
-                      </div>
-                  </div>
-              </div>
 
-          </div>
-  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="faq.js"></script>
+
+            <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+            <script src="vendor/animsition/js/animsition.min.js"></script>
+            <script src="vendor/bootstrap/js/popper.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+            <script src="vendor/select2/select2.min.js"></script>
+            <script src="vendor/daterangepicker/moment.min.js"></script>
+            <script src="vendor/daterangepicker/daterangepicker.js"></script>
+            <script src="vendor/countdowntime/countdowntime.js"></script>
+
+            <script src="js/main.js"></script>
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+
+
+        <!-- /.container-fluid -->
 
       </div>
       <!-- End of Main Content -->
@@ -699,7 +739,7 @@ function filterFunction() {
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2019</span>
+            <span>Copyright &copy; Mahabhujal.in 2019</span>
           </div>
         </div>
       </footer>
@@ -751,6 +791,16 @@ function filterFunction() {
 
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-bar-tree-demo.js"></script>
+
+  <script src="js/demo/chart-bar-rainfall.js"></script>
 
 </body>
 
