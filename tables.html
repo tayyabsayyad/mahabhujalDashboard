@@ -3,6 +3,30 @@
 
 <head>
   <style>
+  .filterable {
+    margin-top: 15px;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
+}
+
     .dropdown-menu {
       width: 50%;
     }
@@ -664,7 +688,36 @@ function filterFunction() {
               <h6 class="m-0 font-weight-bold text-primary">Borewell Data Table</h6>
             </div>
 
+
             <div class="card-body">
+              <div class="row">
+       <div class="panel panel-primary filterable">
+
+
+               <div class="pull-right">
+                   <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+               </div>
+
+           <table class="table">
+               <thead>
+                   <tr class="filters">
+
+
+
+                       <th><input type="text" class="form-control" placeholder="Owner" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Location" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Depth" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Level of water" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Usage" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Categeory" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Status" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Water quality" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Duration of pumping"disabled> </th>
+                       <th><input type="text" class="form-control" placeholder="No of Dependant" disabled></th>
+                   </tr>
+               </thead>
+             </div>
+
 
               <div class="table-responsive">
 
@@ -683,11 +736,7 @@ function filterFunction() {
                       <th>Water quality</th>
                       <th>Duration of pumping </th>
                       <th>No of Dependant</th>
-
-
-
-
-                    </tr>
+                       </tr>
                     </thead>
                     <tfoot>
                     <tr>
@@ -835,6 +884,7 @@ function filterFunction() {
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
+
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -849,6 +899,8 @@ function filterFunction() {
 
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/demo/table.js"></script>
+
 
 </body>
 
