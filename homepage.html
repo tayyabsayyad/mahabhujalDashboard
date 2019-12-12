@@ -1,147 +1,469 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
+    <!-- important for compatibility charset -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Homepage</title>
+    
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    
+    <!-- important for responsiveness remove to make your site non responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Theme Styles CSS File -->
+    <link rel="stylesheet" type="text/css" href="home.css" media="all" />
+    
+    <!-- Slider Font only for Page's which have Slider -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300" rel="stylesheet">
+   
 
-    .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      min-height: 200px;
-    }
-
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
-    @media (max-width: 600px) {
-      .carousel-caption {
-        display: none; 
-      }
-    }
-  </style>
-</head>
 <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-<div class="row">
-  <div class="col-sm-8">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="/home/manleen/Pictures/images (1).jpeg" alt="Image">
-          <div class="carousel-caption">
-            
-          </div>      
-        </div>
-
-        <div class="item">
-          <img src="/home/manleen/Pictures/Screenshot from 2019-09-07 02-29-41.png" alt="Image">
-          <div class="carousel-caption">
-            
-          </div>      
-        </div>
-      </div>
-
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-  <div class="medium-6 small-12 columns small-posts">
-                    
-        <div class="post-wrapper">
-            <div class="featured-image">
-                <a href="#">
-                    <img src="assets/images/thumb1.jpg" alt="Post Thumbnail" />
-                </a>
-            </div> <!-- Thumbnail Ends /-->
-            <div class="post-meta">
-                <h1><a href="#">Top 5 Scariest Mistakes in Web Design</a></h1>
-                <div class="post-author">By <a href="#">Robert Krenz</a></div> <div class="post-category">Posted In: <a href="#">SEO</a></div>
-                <p>If you want to grow the ranking of your website you should always use a unique and good design for your website google is ... <a href="#">Read more &raquo;</a></p>
-            </div><!-- post meta Ends /-->
-        </div><!-- Post Ends /-->
+    <div class="main-container">
+    	
+        <div class="topBar">
+        	<div class="row">
+            	
+                
+                
+            </div><!-- Row Ends /-->
+        </div><!-- TopBar Ends /-->
+    	
         
-        <div class="post-wrapper">
-            <div class="featured-image">
-                <a href="#">
-                    <img src="" alt="Post Thumbnail" />
-                </a>
-            </div> <!-- Thumbnail Ends /-->
-            <div class="post-meta">
-                <h2><a href="#">What's most beautiful design in 2017</a></h2>
-                <div class="post-author">By <a href="#">Robert Krenz</a></div> <div class="post-category">Posted In: <a href="#">SEO</a></div>
-                <p>If you want to grow the ranking of your unique and good design for your website google is ... <a href="#">Read more &raquo;</a></p>
-            </div><!-- post meta Ends /-->
-        </div><!-- Post Ends /-->
+        
+        
+        
+        <div class="navigation">
+        	<div class="row">
+
+                <div class="top-bar">
+                
+                    <div class="top-bar-title hide-for-medium">
+                        <span data-responsive-toggle="responsive-menu">
+                            <button class="menu-icon dark" type="button" data-toggle></button>
+                        </span>
+                        <strong>Navigation</strong>
+                    </div><!-- Top Bar Title Ends /-->
+                
+                    <div id="responsive-menu">
+                            <div class="medium-4 small-12 columns logo">
+                                    <a href="#">
+                                        <img src="assets/images/logo.jpg" alt="FoundLocals" />
+                                    </a>
+                                </div><!-- Logo Section /-->
+                    
+                        <nav class="top-bar-left">
+                            <ul class="menu vertical medium-horizontal" data-responsive-menu="accordion medium-dropdown">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">More ></a></li>
+                            </ul>
+                        </nav><!-- Left Side Ends /-->
+                        
+                        <div class="top-bar-right">
+                        	
+                            <button class="mainbtn button primary" type="button" data-toggle="searchbox"><i class="fa fa-search"></i></button>
+
+	                        <div class="dropdown-pane searchwrapp" id="searchbox" data-dropdown>
+                              <input type="search" placeholder="Search">
+                              <button class="button primary" placeholder="Your Keyword..." type="button" data-toggle="searchbox"><i class="fa fa-search"></i></button>
+                            </div>
+                            
+                        </div><!-- Right Side Ends /-->
+                        
+                    </div><!-- Responsive Menu Ends /-->
+                
+                </div><!-- Top Bar Ends /-->
+
+            </div><!-- Row Ends /-->
+        </div><!-- Navigation Ends /-->
+        <!--Image slider-->
     
-    </div><!-- Small Posts Ends /-->
+              
+        
+        <div class="main-banner">
+        	
+            <div class="slide slide-first">
+            	<div class="row relative">
+                	<div class="medium-12 small-12 columns">
+                    	<div class="banner-text">
+                        	<h2>Helping Local Businesses To Get Found Since 2008!</h2>
+                            <h3>We're Not Just About SEO, But Proven Marketing Systems.</h3>
+                            <a href="#" class="button primary">Learn More</a> <a href="#" class="button secondary">Contact Us</a>
+                        </div>
+                        <div class="banner-image">
+                        	<img src="assets/images/social-icons.png" alt="Social Image" />
+                        </div>
+                    </div><!-- Column Ends /-->
+                </div><!-- Row Ends /-->
+            </div><!-- Slide Ends /-->
+            
+        </div><!-- Main Banner Ends /-->
+        
+        
+        <div class="information-boxes-wrapper module row">
+        	
+            <div class="medium-3 small-12 columns dark-green information-box">
+            	<img src="assets/images/local-seo.png" alt="Local SEO" />
+                <h2>Work with Us</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
+                <a href="#" class="button primary">Learn More</a>
+            </div><!-- box Ends /-->
+            
+            <div class="medium-3 small-12 columns light-green information-box">
+            	<img src="assets/images/social-media.png" alt="Social Media" />
+                <h2>Volunteer</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
+                <a href="#" class="button primary">Learn More</a>
+            </div><!-- box Ends /-->
+            
+            <div class="medium-3 small-12 columns dark-green information-box">
+            	<img src="assets/images/mobile-marketing.png" alt="Mobile Marketing" />
+                <h2>Contribute</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
+                <a href="#" class="button primary">Learn More</a>
+            </div><!-- box Ends /-->
+            
+            <div class="medium-3 small-12 columns light-green information-box">
+            	<img src="assets/images/reputation-management.png" alt="Reputation Management" />
+                <h2>Participate</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
+                <a href="#" class="button primary">Learn More</a>
+            </div><!-- box Ends /-->
+            
+        </div><!-- Information boxes /-->
+        
+        
+        <div class="welcome-message row module">
+        	
+            <div class="medium-6 small-12 columns image-side">
+           		<img src="/home/manleen/code/mahabhujalDashboard/img/WhatsApp Image 2019-10-05 at 20.59.37.jpeg" alt="Business People" /> 	
+            </div><!-- image side /-->
+            
+            <div class="medium-6 small-12 columns welcome-message-side">
+            	<h2>Welcome To <span>MahaBhuJal</span></h2>
+                
+                <p>MahaBhujal,is a rainwater goverance system which allows people's participation and contribution to groundwater resources and they will get to know their water status of their area.This is set up with the aim of making Maharashtra drought-free using the power of communication. DBIT students have researched the issue of water and found that man, not nature is largely responsible for this crisis of drought. While decentralised watershed management has proved to be the scientific solution to this problem, the greater problem to address has been that of social fracture.  This system believe in the power of unity, and are convinced that only a people’s movement can eradicate drought. Our efforts have been towards catalysing this movement. We have created simple training films, an Android App as well as training manuals for this purpose, and have teams working across the state to impart this knowledge.The efforts of the villagers themselves have ensured that a water revolution is not far away.
+</p>
+				
+                <img src="assets/images/partner-logos.jpg" alt="Partner Logos" />
+            </div><!-- Welcome Message /-->
+        
+        </div><!-- Welcome message Ends /-->
+        
+        
+        <div class="icons-section module">
+        	<div class="row">
+            	
+                <div class="information-icon medium-3 small-12 columns">
+                	<div class="icon-side">
+                    	<i class="fa fa-user-md" aria-hidden="true"></i>
+                    </div><!-- Icon Side Ends /-->
+                    <div class="information-side">
+                    	<h2>Are you Researcher?</h2>
+                        <p>From Last 30 years we are in industry and have honor. 123-123-1234</p>
+                    </div><!-- Information Side Ends /-->
+                </div><!-- Column Ends /-->
+                
+                <div class="information-icon medium-3 small-12 columns">
+                	<div class="icon-side">
+                    	<i class="fa fa-gavel" aria-hidden="true"></i>
+                    </div><!-- Icon Side Ends /-->
+                    <div class="information-side">
+                    	<h2>Are you Student?</h2>
+                        <p>We have awesome strategy for lawyers to help their firms grow fast and build market.</p>
+                    </div><!-- Information Side Ends /-->
+                </div><!-- Column Ends /-->
+                
+                <div class="information-icon medium-3 small-12 columns">
+                	<div class="icon-side">
+                    	<i class="fa fa-cutlery" aria-hidden="true"></i>
+                    </div><!-- Icon Side Ends /-->
+                    <div class="information-side">
+                    	<h2>You have some ground water info?</h2>
+                        <p>Our best marketing plans are there to help you grow your business and get more</p>
+                    </div><!-- Information Side Ends /-->
+                </div><!-- Column Ends /-->
+                
+                <div class="information-icon medium-3 small-12 columns">
+                	<div class="icon-side">
+                    	<i class="fa fa-stethoscope" aria-hidden="true"></i>
+                    </div><!-- Icon Side Ends /-->
+                    <div class="information-side">
+                    	<h2>Feel free to explore ?</h2>
+                        <p>We have special plan for cosmetic surgeons as well to call us 123-123-1234</p>
+                    </div><!-- Information Side Ends /-->
+                </div><!-- Column Ends /-->
+                
+            </div><!-- Row Ends /-->	
+        </div><!-- Icons Section Ends /-->
+        
+        
+        <div class="module transparent-background our-services">
+        	<div class="row">
+				
+                <div class="section-title">
+                	<h2>People <span>Contributions</span></h2>
+                </div><!-- Title Ends /-->
+                
+                <div class="services-wrapper">
+                	
+                    <div class="medium-4 small-12 columns">
+                    	<div class="service-wrap">
+                        	<img src="assets/images/icon-box-6.png" alt="SEO" />
+                            <h2><a href="#">Tayyabali Sayyad</a></h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ...</p>
+                            <a href="#">Read More &gt;</a>
+                        </div>
+                    </div><!-- Service Box Ends /-->
+                    
+                    <div class="medium-4 small-12 columns">
+                    	<div class="service-wrap">
+                        	<img src="assets/images/icon-box-5.png" alt="SEO" />
+                            <h2><a href="#">Manleen Kohli</a></h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ...</p>
+                            <a href="#">Read More &gt;</a>
+                        </div>
+                    </div><!-- Service Box Ends /-->
+                    
+                    <div class="medium-4 small-12 columns">
+                    	<div class="service-wrap">
+                        	<img src="assets/images/icon-box-4.png" alt="SEO" />
+                            <h2><a href="#">Ramola Shishupal</a></h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ...</p>
+                            <a href="#">Read More &gt;</a>
+                        </div>
+                    </div><!-- Service Box Ends /-->
+                    
+                    
+                    <div class="medium-4 small-12 columns">
+                    	<div class="service-wrap">
+                        	<img src="assets/images/icon-box-1.png" alt="SEO" />
+                            <h2><a href="#">Fauziya Ansari</a></h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ...</p>
+                            <a href="#">Read More &gt;</a>
+                        </div>
+                    </div><!-- Service Box Ends /-->
+                    
+                    <div class="medium-4 small-12 columns">
+                    	<div class="service-wrap">
+                        	<img src="assets/images/icon-box-2.png" alt="SEO" />
+                            <h2><a href="#">Angela Pereira</a></h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ...</p>
+                            <a href="#">Read More &gt;</a>
+                        </div>
+                    </div><!-- Service Box Ends /-->
+                    
+                    <div class="medium-4 small-12 columns">
+                    	<div class="service-wrap">
+                        	<img src="assets/images/icon-box-3.png" alt="SEO" />
+                            <h2><a href="#">DBIT</a></h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ...</p>
+                            <a href="#">Read More &gt;</a>
+                        </div>
+                    </div><!-- Service Box Ends /-->
+                    
+                </div><!-- Services Wrapper Ends /-->
+                
+            </div><!-- Row Ends /-->
+        </div><!-- Our Services Ends /-->
+        
+        
+        <div class="module why-chose-us">
+        	<div class="row">
+            	
+                <div class="section-title">
+                	<h2>Why Chose <span>MahaBhuJal</span></h2>
+                </div><!-- Title Ends /-->
+                
+                <div class="why-chose-us-wrapper">
+                	
+                    <div class="medium-8 small-12 columns faqs-section">
+                        <ul class="accordion" data-accordion data-allow-all-closed="true">
+                            <li class="accordion-item is-active" data-accordion-item>
+                                <a href="#" class="accordion-title">What is MahaBhuJal?</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Accountability: How can you track the progress and reports with us?</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Risk-Free: What's the guarantee that i will get the results i am willing?</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                </div>
+                            </li>
+                            
+                            
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Finance: Is there any financial help if i cannot afford the cost?</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div><!-- Faq's Section Ends /-->
+                    
+                    <div class="medium-4 small-12 columns testimonials-section">
+                    
+                        <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
     
-
-<div class="container text-center">    
-  <h3><b>MahaBhujal</b></h3>
-  <br>
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="/home/manleen/Downloads/WhatsApp Image 2019-10-05 at 20.59.37.jpeg" class="img-responsive" style="width:100%" alt="Image">
-      <p>Team</p>
-    </div>
-      <p>MahaBhujal,is a rainwater goverance system which allows people's participation and contribution to groundwater resources and they will get to know their water status of their area.This is set up with the aim of making Maharashtra drought-free using the power of communication. DBIT students have researched the issue of water and found that man, not nature is largely responsible for this crisis of drought. While decentralised watershed management has proved to be the scientific solution to this problem, the greater problem to address has been that of social fracture.  This system believe in the power of unity, and are convinced that only a people’s movement can eradicate drought. Our efforts have been towards catalysing this movement. We have created simple training films, an Android App as well as training manuals for this purpose, and have teams working across the state to impart this knowledge.The efforts of the villagers themselves have ensured that a water revolution is not far away.</p>
-    </div>  
-  
-  <hr>
-</div>
-
-
-
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
-
+                            <ul class="orbit-container">
+                            
+                                <li class="orbit-slide is-active">
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+                                    <div class="testimonial-by">
+                                        <img src="assets/images/testi1.jpg" alt="Tina Doe" />
+                                        <div class="title">
+                                        	<span class="name">Tina Doe</span>
+                                            <span class="designation">Marketing Manager 123 Company</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>	
+                                </li>
+                                
+                                <li class="orbit-slide">
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+                                    <div class="testimonial-by">
+                                        <img src="assets/images/testi2.jpg" alt="Tina Doe" />
+                                        <div class="title">
+                                        	<span class="name">John Doe</span>
+                                            <span class="designation">Marketing Manager ABC Company</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>	
+                                </li>
+                                
+                                <li class="orbit-slide">
+                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
+                                    <div class="testimonial-by">
+                                        <img src="assets/images/testi3.jpg" alt="Tina Doe" />
+                                        <div class="title">
+                                        	<span class="name">Maria Doe</span>
+                                            <span class="designation">Marketing Manager ABC Company</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>	
+                                </li>
+                            
+                            </ul>
+                            <nav class="orbit-bullets">
+                                <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+                                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                                <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                            </nav>
+                        </div><!-- Column Testimonials Ends /-->
+                    
+                    </div><!-- Testimonials Ends /-->
+                    
+                    <div class="small-12 columns our-clients">
+                    	<img src="assets/images/our-clients.jpg" alt="our Clients" />
+                    </div><!-- Client logos /-->
+                    
+                </div><!-- Wrapper Ends /-->
+                
+            </div><!-- Row Ends /-->
+        </div><!-- Why Chose Us Ends /-->
+        
+        
+        <div class="our-recent-news module">
+        	<div class="row">
+            	
+                <div class="section-title">
+                	<h2>Our Recent <span>News</span></h2>
+                </div><!-- Section Title /-->
+            	
+                <div class="news-wrapper">
+                	
+                    <div class="medium-6 small-12 columns big-news">
+                    	<div class="post-date">
+                        		27.12.2017
+                        </div>
+                   		<div class="featured-image">
+                        	<a href="#">
+                            	<img src="assets/images/bigpost.jpg" alt="Post image" />
+                            </a>
+                        </div>
+                         
+                    </div><!-- Big News Ends /-->                
+                	
+                    <div class="medium-6 small-12 columns small-posts">
+                    
+                    	<div class="post-wrapper">
+                        	<div class="featured-image">
+                            	<a href="#">
+                                	<img src="assets/images/thumb1.jpg" alt="Post Thumbnail" />
+                                </a>
+                            </div> <!-- Thumbnail Ends /-->
+                            <div class="post-meta">
+                            	<h2><a href="#">Top 5 Scariest Mistakes in Web Design</a></h2>
+                                <div class="post-author">By <a href="#">Robert Krenz</a></div> <div class="post-category">Posted In: <a href="#">SEO</a></div>
+                                <p>If you want to grow the ranking of your website you should always use a unique and good design for your website google is ... <a href="#">Read more &raquo;</a></p>
+                            </div><!-- post meta Ends /-->
+                        </div><!-- Post Ends /-->
+                        
+                        <div class="post-wrapper">
+                        	<div class="featured-image">
+                            	<a href="#">
+                                	<img src="assets/images/thumb2.jpg" alt="Post Thumbnail" />
+                                </a>
+                            </div> <!-- Thumbnail Ends /-->
+                            <div class="post-meta">
+                            	<h2><a href="#">What's most beautiful design in 2017</a></h2>
+                                <div class="post-author">By <a href="#">Robert Krenz</a></div> <div class="post-category">Posted In: <a href="#">SEO</a></div>
+                                <p>If you want to grow the ranking of your website you should always use a unique and good design for your website google is ... <a href="#">Read more &raquo;</a></p>
+                            </div><!-- post meta Ends /-->
+                        </div><!-- Post Ends /-->
+                        
+                        <div class="post-wrapper">
+                        	<div class="featured-image">
+                            	<a href="#">
+                                	<img src="assets/images/thumb3.jpg" alt="Post Thumbnail" />
+                                </a>
+                            </div> <!-- Thumbnail Ends /-->
+                            <div class="post-meta">
+                            	<h2><a href="#">How we can secure our WordPress Website</a></h2>
+                                <div class="post-author">By <a href="#">Robert Krenz</a></div> <div class="post-category">Posted In: <a href="#">SEO</a></div>
+                                <p>If you want to grow the ranking of your website you should always use a unique and good design for your website google is ... <a href="#">Read more &raquo;</a></p>
+                                
+                            </div><!-- post meta Ends /-->
+                        </div><!-- Post Ends /-->
+                    
+                    </div><!-- Small Posts Ends /-->
+                    <hr>
+                                <div class="col-md-12">
+                                    <h3>www.mahabhujal.com</h3>
+                                </div>
+                    
+                </div><!-- News Wrapper Ends /-->
+                
+            </div><!-- Row Ends /-->
+        </div><!-- Our Recent News /-->
+        
+    </div><!-- Main Container Ends /-->
+    
+    <!-- Including Jquery so All js Can run -->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    
+    <!-- Including Foundation JS so Foundation function can work. -->
+    <script type="text/javascript" src="assets/js/foundation.min.js"></script>
+    
+    <!-- Webful JS -->
+    <script src="assets/js/webful.js"></script> 
 </body>
-</html>
+</html>    

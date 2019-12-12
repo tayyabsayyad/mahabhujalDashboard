@@ -1,0 +1,653 @@
+/*
+Author       : Webful Creations Vision (https://themeforest.net/user/webfulcreationsvision/portfolio)
+Template Name: FoundLocal's Website Template
+Version      : 1.0
+CopyRight    : 2017 April @ www.webfulcreations.com
+*/
+/*=============================================================
+    TABLE OF CONTENTS
+    =============================
+    01 - General CSS 
+  =============================================================*/
+
+
+/*-------------------------
+ 01 - General CSS starts
+-------------------------*/
+body {
+	font-family:'Lato', sans-serif;
+	line-height:25px;
+	font-size:0.875rem;
+	font-weight:400;
+    padding:0;
+    margin:0;
+	color:#5d5d5d;
+}
+h1, 
+h1 a { 
+	font-size:2rem;
+    margin-bottom:15px;
+}
+h2, 
+h2 a {
+	font-size:1.75rem;
+}
+h3, 
+h3 a { 
+	font-size:1.50rem;
+}
+h4, h4 a { 
+	font-size:1.25rem;
+}
+h5, 
+h6, 
+h5 a, 
+h6 a {
+	font-size:1rem; 
+}
+label, 
+p, 
+ul, 
+ol, 
+a, 
+blockquote, 
+input, 
+textarea, 
+select, 
+[type=date], 
+[type=text], 
+[type=email], span { 
+	font-size:0.875rem;
+	line-height:25px;
+	color:#5d5d5d;
+}
+h1,h2,h3,h4,h5,h6, h2 a, h3 a, h4 a, h5 a, h6 a, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+	font-family: 'Raleway', sans-serif;
+	font-weight:bold;
+	color:#2a2a2a;
+}
+a:hover {
+	color:#7cc039; 
+}
+iframe {
+	width:100%;
+	border:0px; 
+}
+.button {
+	text-transform:uppercase;
+	font-weight:bold;
+	font-family: 'Raleway', sans-serif;
+}
+.button.primary {
+	background-color:#00c5dc; 
+}
+.button.primary:hover {
+	background-color:#7cc039; 
+}
+.button.secondary {
+	background-color:#7cc039; 
+}
+.button.secondary:hover {
+	background-color:#00c5dc; 
+}
+.bordered-light {
+	background-color:transparent !important;
+	border:1px solid #00c5dc; 
+}
+.bordered-light:hover {
+	background-color:#00c5dc !important;
+	border-color:#00c5dc !important;	 
+}
+.module {
+	position:relative;
+	margin-bottom:80px; 
+}
+dl dt {
+	font-weight:bold;
+	margin-bottom:.3rem;
+}
+.main-container {
+	width:100%;
+	margin:auto; 
+}
+hr {
+	border-bottom: 1px solid #ededed;
+}
+/*-------------------------
+ General CSS Ends
+-------------------------*/
+
+/*-------------------------
+ Top Bar CSS
+-------------------------*/
+.topBar {
+	background-color:#2a2a2a;
+	color:#FFF; 
+}
+.topBar a {
+	color:#FFF; 
+}
+.topBar a:hover {
+	color:#7cc039;	 
+}
+.topBar .menu li {
+	padding:12px 0px; 
+}
+.topBar .menu li a {
+	padding:0px;
+	line-height:16px;
+	padding:0px 6px; 
+	border-right:1px solid #FFF;
+}
+.topBar .menu li:first-child a {
+	padding-left:0px; 
+}
+.topBar .menu li:last-child a {
+	border-right:0px; 
+}
+.right-topBar .menu li {
+	padding:0px; 
+}
+.right-topBar .menu li a {
+	border-right:0px; 
+}
+.right-topBar .menu li a.button {
+	font-size:1.4rem; 
+    padding: 11px 12px;
+}
+.topBar .right-topBar ul li {
+	display:inline-block; 
+}
+.topBar .right-topBar ul {
+	text-align:right; 
+}	
+/*-------------------------
+ Top Bar CSS Ends
+-------------------------*/
+
+/*-------------------------
+ Header CSS
+-------------------------*/
+.header {
+	position:relative;
+	width:100%; 
+	padding-top:25px;
+	padding-bottom:25px;
+}
+.logo img {
+	height:55px;
+	width:auto; 
+}
+.icon-side {
+	width:55px;
+	height:55px;
+	border-radius:100%;
+	border:2px solid #7cbf38; 
+	color:#7cbf38;
+	text-align:center;
+}
+.icon-side i {
+	line-height:55px;
+	font-size:1.75rem;
+}
+.information-side p {
+	margin-bottom:5px; 
+}
+.information-side h3 {
+	font-size:1.10rem; 
+	margin-bottom:0px;
+}
+.icon-boxes .medium-6 {
+	width:calc(42% + 15px); 
+}
+.icon-boxes .medium-4 {
+	width:calc(25% + 15px);
+}
+.icon-box .icon-side {
+	margin-right:15px; 
+}
+.icon-boxes .medium-offset-2 {
+	margin-left:29%; 
+}
+/*-------------------------
+ Header CSS Ends
+-------------------------*/
+
+/*-------------------------
+ Navigation CSS
+-------------------------*/
+.navigation {
+	width:100%;
+	position:relative;
+	background-color:#6a78c8; 
+	-moz-box-shadow: rgba(0,0,0,.239216) 0 4px 9px 0;
+    box-shadow: rgba(0,0,0,.239216) 0 4px 9px 0;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+	z-index:99;
+}
+.top-bar ul {
+	background-color:transparent; 
+}
+.top-bar {
+	padding:0px; 
+	background-color:transparent;
+} 
+.top-bar ul li a {
+	font-size:1rem;
+	font-family: 'Raleway', sans-serif;
+	color:#FFF;
+}
+.top-bar ul li a:hover {
+	color:#7cbf38; 
+}
+.top-bar ul ul li a {
+	color:#2a2a2a; 
+	border-bottom:1px solid #ededed;
+}
+.top-bar ul ul li a:hover {
+	background-color:#6a78c8;
+	color:#FFF; 
+}
+.top-bar ul ul {
+	background-color:#FFF; 
+	border:0px;
+}
+.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a:after {
+	    border-color: #FFF transparent transparent; 
+}
+.mainbtn.hover .fa-search:before {
+	content:"\f00d "; 
+}
+.top-bar-right .button {
+	margin-bottom:0px; 
+}
+.top-bar input[type=search] {
+	max-width:100%; 
+	margin-bottom:0px;
+}
+.searchwrapp {
+	background-color:#ededed; 
+}
+.searchwrapp .button {
+	position:absolute;
+	top:16px;
+	right:16px; 
+}
+.top-bar-right {
+	position:relative; 
+}
+.dropdown-pane {
+	left:-300px; 
+	z-index:9000;
+}
+/*-------------------------
+ Navigation CSS Ends
+-------------------------*/
+
+/*-------------------------
+ Main Banner CSS
+-------------------------*/
+.main-banner {
+	width:100%;
+	position:relative; 
+}
+.slide {
+	width:100%;
+	background-color:#FFF;
+	background-image:url("../images/banner-bg.jpg"); 
+	min-height:540px;
+	background-size:cover;
+}
+.slide .banner-text {
+	font-family: 'Roboto Slab', serif; 
+	width:calc(100% - 400px);
+	padding-top:150px;
+	padding-bottom:150px;
+}
+.slide .banner-text .button {
+	margin-bottom:0px; 
+}
+.slide .banner-text h2 {
+	font-family: 'Roboto Slab', serif; 
+	font-size:3.3rem;
+	color:#FFF;
+	font-weight:300;
+	text-transform:uppercase;
+}
+.slide .banner-text h3 {
+	font-family: 'Roboto Slab', serif; 
+	font-size:1.93rem;	 
+	color:#FFF;
+	font-weight:100;
+}
+.banner-image {
+	position:absolute;
+	right:0px;
+	top:60px; 
+	width:450px;
+}
+.relative {
+	position:relative; 
+}
+/*-------------------------
+ Main Banner CSS Ends
+-------------------------*/
+
+/*-------------------------
+ Information Boxes CSS
+-------------------------*/
+.information-boxes-wrapper {
+	position:relative;	
+	margin-top:-75px; 
+}
+.information-boxes-wrapper .dark-green {
+	 background-color:#97ca2f;
+}
+.information-boxes-wrapper .light-green {
+	 background-color:#a3db2f;
+}
+.information-box {
+	text-align:center; 
+	padding:25px 20px;
+}
+.information-box h2 {
+	font-size:1.3rem; 
+}
+.information-box p {
+	color:#2a2a2a; 
+}
+.information-box .button {
+	margin-bottom:0px; 
+}
+.information-box img {
+	width:77px;
+	height:77px; 
+	margin-bottom:20px;
+}
+/*-------------------------
+ Information Boxes CSS Ends
+-------------------------*/
+
+/*-------------------------
+ Welcome Message CSS
+-------------------------*/
+.welcome-message-side h2,
+.welcome-message-side h2 span { 
+	font-size:1.875rem;
+	font-weight:bold;
+	margin-bottom:0px;
+}
+.welcome-message-side h2 span {
+	color:#97ca2f; 
+}
+.welcome-message-side h3 {
+	font-size:1.25rem;
+	font-weight:normal;
+	margin-bottom:25px; 
+}
+.welcome-message-side h4 {
+	font-weight:normal; 
+}
+/*-------------------------
+ Welcome Message CSS Ends
+-------------------------*/
+
+/*-------------------------
+ Icons Section CSS
+-------------------------*/
+.information-icon { 
+	position:relative;
+}
+.information-icon .icon-side {
+	 background-color:#7cbf38;
+	 color:#FFF;
+	 float:left;
+	 margin-right:15px;
+}
+.information-side {
+	float:left;
+	width:calc(100% - 70px); 
+}
+.information-side h2 {
+	font-size:1.125rem; 
+}
+.information-side p {
+	margin-bottom:0px; 
+}
+/*-------------------------
+ Icons Section CSS Ends
+-------------------------*/
+
+
+/*-------------------------
+ Transparent Background CSS
+-------------------------*/
+.transparent-background {
+	padding-top:70px;
+	padding-bottom:70px;
+	width:100%;
+	position:relative;
+	background-color:rgba(42, 42, 42, 0.9);
+}
+.transparent-background::after {
+    content: "";
+    background: url("../images/background-effect.jpg");
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.transparent-background .section-title h2 {
+	color:#FFF; 
+}
+.section-title {
+	margin-bottom:95px; 
+	text-align:center;
+	position:relative;
+}
+.section-title h2, 
+.section-title h2 span {
+	font-size:2.25rem;	 
+	font-weight:bold;
+}
+.section-title h2 span {
+	color:#97ca2f; 
+}
+.section-title::after {
+	content: ""; 
+	width:35px;
+	height:35px;
+	background:url("../images/pie-chart.png");
+	z-index:5;
+	position:absolute;
+	left:50%;
+	margin-left:-17.5px;
+}
+/*-------------------------
+ Transparent Background End
+-------------------------*/
+
+/*-------------------------
+ Services Section CSS
+-------------------------*/
+.service-wrap {
+	background-color:#FFF;
+	padding:60px 40px;
+	text-align:center; 
+}
+.service-wrap img {
+	margin-bottom:15px; 
+}
+.service-wrap h2 a {
+	font-size:1.25rem; 
+}
+.service-wrap p {
+	text-align:justify center; 
+}
+.service-wrap a {
+	font-size:1rem;
+	font-weight:bold; 
+	margin-bottom:0px;
+}
+.services-wrapper .columns {
+	padding-top:.9375rem;
+	padding-bottom:.9375rem; 
+}
+.services-wrapper .columns:nth-last-child(-n+3) {
+	padding-bottom:0px; 
+}
+.services-wrapper .columns:nth-child(-n+3) {
+	padding-top:0px; 
+}
+/*-------------------------
+ Services Section CSS Ends
+-------------------------*/
+
+
+/*-------------------------
+ Why Chose US CSS Starts
+-------------------------*/
+.is-active .accordion-title {
+	background-color:#2a2a2a; 
+	color:#FFF;
+}
+.accordion-title {
+	background-color:#ededed;
+	padding:12px 10px;
+	font-size:0.875rem;
+	font-weight:bold; 
+	font-family:"Raleway";
+	color:#2a2a2a;
+}
+.accordion-item {
+	margin-bottom:10px; 
+}
+.accordion-content {
+	background-color:#ebf3f5; 
+	border:0px;
+}
+.accordion-content p {
+	margin-bottom:0px; 
+}
+.testimonial-by img {
+	width:75px;
+	height:auto;
+	border-radius:100%;
+	margin-right:15px;
+	float:left; 
+}
+.testimonial-by .title {
+	padding-top:5px; 
+}
+.testimonial-by .name {
+	display:block;
+	font-size:1rem;
+	font-weight:bold; 
+	color:#2a2a2a;
+}
+.testimonials-section p {
+	padding:15px;
+	background-color:#ebf3f5; 
+	border-radius:10px;
+	margin-bottom:20px;
+}
+.testimonials-section .orbit-bullets button {
+	border-radius:0px;
+	background-color:transparent;
+	border:1px solid #97ca2f;
+	width:25px;
+	height:8px;
+	cursor:pointer; 
+}
+.testimonials-section .orbit-bullets button:hover, 
+.testimonials-section .orbit-bullets button.is-active {
+	background-color:#97ca2f;	 
+}
+.our-clients img {
+	width:100%;
+	height:auto; 
+	margin-top:5px;
+}
+.accordion .accordion-item:last-child {
+	margin-bottom:0px; 
+}
+.accordion {
+	margin-bottom:0px; 
+}
+.orbit-bullets {
+	margin-bottom:0px; 
+}
+/*-------------------------
+ Why Chose US CSS Ends
+-------------------------*/
+
+
+/*-------------------------
+ Recent News CSS
+-------------------------*/
+.post-date {
+	color:#97ca2f;
+	font-weight:bold;
+	font-size:1.25rem;
+	font-family:raleway;	 
+}
+.featured-image img {
+	width:100%;
+	height:auto;
+	margin-bottom:20px; 
+}
+.post-meta h2 a {
+	font-size:1.5rem; 
+}
+.post-meta a {
+	color:#2a2a2a; 
+}
+.post-meta .post-author {
+	float:left;
+	margin-right:15px;
+	display:inline-block; 
+}
+.readmore {
+	font-size:1rem; 
+}
+.post-wrapper {
+	position:relative; 
+	margin-bottom:25px;
+}
+.post-wrapper:after {
+	content:"";
+	display:table;
+	clear:both; 
+}
+.post-wrapper .featured-image {
+	float:left;
+	width:125px;
+	height:auto; 
+	margin-right:15px;
+}
+.post-wrapper .featured-image img {
+	margin-bottom:0px; 
+}
+.post-wrapper .post-meta {
+	width:calc(100% - 140px); 
+	float:left;
+}
+.post-wrapper .post-meta h2 {
+	margin-top:0px;
+	line-height:1;
+	margin-bottom:10px; 
+}
+.post-wrapper .post-meta p {
+	margin-bottom:0px; 
+}
+.post-wrapper .post-meta h2 a {
+	font-size:1.25rem; 
+}
+/*-------------------------
+ Recent News CSS Ends
+-------------------------*/
+
