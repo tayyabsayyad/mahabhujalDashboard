@@ -1,0 +1,8 @@
+@import 'assets/css/foundation.min.css';      /* Including Foundation CSS File */
+@import 'assets/css/font-awesome.min.css';	   /* Including Font Awesome Icons */
+@import 'assets/css/theme-styles.css';		   /* Main Theme CSS File */
+@import 'assets/css/responsive-styles.css';	   /* Main Theme CSS File */
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|Raleway:400,700';

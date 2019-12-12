@@ -3,8 +3,6 @@
 
 <head>
   <style>
-      @import url('https://fonts.googleapis.com/css?family=Oswald:500,600,700|Roboto');
-
     .dropdown-menu {
       width: 50%;
     }
@@ -14,13 +12,6 @@
       max-height: 200px;
       overflow-x: hidden;
     }
-    h1 {
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-size: 60px;
-    margin: 50px 0 0;
-    color: #000;
-}
   </style>
   <script>
   /* When the user clicks on the button,
@@ -162,33 +153,6 @@ function filterFunction() {
         </div>
       </li> -->
 
-       <!-- Nav Item - BoreWell -->
-       <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-upload"></i>
-            <span>Borewell</span></a>
-        </li>
-
-         <!-- Nav Item - Rainfall -->
-       <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-spinner"></i>
-            <span>Rainfall</span></a>
-        </li>
-
-         <!-- Nav Item - Water Level -->
-       <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fa fa-plus-square"></i>
-            <span>Water Level</span></a>
-        </li>
-
-
-
-
-
-
-
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -217,42 +181,56 @@ function filterFunction() {
           </div>
         </div>
       </li>-->
+ 
+      <!-- Nav Item - Borewell Tables -->
 
-      <!-- Nav Item - Alerts -->
-      <li class="nav-item">
+ <li class="nav-item">
+    <a class="nav-link" href="BoreWellTables.html">
+      <i class="fas fa-upload"></i> 
+      <span>Borewell</span></a>
+  </li>
+ 
+  <!-- Nav Item - Rainfall Tables -->
+
+  <li class="nav-item">
+    <a class="nav-link" href="RainfallTable.html">
+      <i class="fas fa-spinner"></i>
+      <span>Rainfall</span></a>
+  </li>
+
+<!-- Nav Item - Water Level -->
+  <li class="nav-item">
+      <a class="nav-link" href="WaterLevelTable.html">
+        <i class="fa fa-plus-square"></i>
+        <span>Water Level</span></a>
+    </li> 
+            <!-- Nav Item - Trees -->
+              <li class="nav-item">
+                      <a class="nav-link" href="treesForm.html">
+                      <i class="fa fa-tree"></i>
+                      <span>Trees</span></a>
+                  </li>
+
+        <!-- Nav Item - Maps -->
+        <li class="nav-item">
+          <a class="nav-link" href="maps.html">
+            <i class="fas fa-map"></i>
+            <span>Maps</span></a>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+          <a class="nav-link" href="charts.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Charts</span></a>
+        </li>
+
+        <!-- Nav Item - Alerts -->
+        <li class="nav-item">
           <a class="nav-link" href="#">
             <i class="fas fa-bell"></i>
             <span>Alerts</span></a>
         </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
-      </li>
-
-      <!-- Nav Item - Tables -->
-
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Borewell</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="rain.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Rainfall</span></a>
-        </li>
-
-
-      <!-- Nav Item - Maps -->
-      <li class="nav-item">
-        <a class="nav-link" href="maps.html">
-          <i class="fas fa-map"></i>
-          <span>Maps</span></a>
-      </li>
-
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -648,14 +626,92 @@ function filterFunction() {
 
         <!-- Begin Page Content -->
 
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <div>
+              <h1 class="h3 mb-2 text-gray-800">Mahabhujal - WaterLevel in Borewells Analysis and Tables</h1>
+              <p class="mb-4">Enter Location and view borewells on maps with their respactive data in tables...</p>
+              <a href="waterLevelForm.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Add Data</a>
+    </div>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Water level Data Table</h6>
+              </div>
+  
+              <div class="card-body">
+  
+                <div class="table-responsive">
+  
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead onloadedmetadata="Rainfall(mm)">
+                      <tr>
+                        <th>mm</th>
+                        <th>location</th>
+                        <th>Volunteer name</th>
+                        <th>date</th>
+                        <th>time</th>
+  
+  
+  
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <th>32 mm</th>
+                        <th>shree nagar</th>
+                        <th>sneha</th>
+                        <th>5 dec</th>
+                        <th>8 am</th>
+  
+  
+                      </tr>
+                    </tfoot>
+                    <tbody>
+                      <tr>
+                        <th>30 mm</th>
+                        <th>shanti nagar</th>
+                        <th>sriya</th>
+                        <th>5 dec</th>
+                        <th>10 am</th>
+  
+  
+                      </tr>
+                      <tr>
+                        <th>36 mm</th>
+                        <th>vaishali nagar</th>
+                        <th>riya</th>
+                        <th>5 dec</th>
+                        <th>11 am</th>
+                      </tr>
+  
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+  
+           <!-- Rainfall Chart -->
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Water level Data</h6>
+      </div>
+      <div class="card-body">
+        <div class="chart-area">
+          <div id=""></div>
+          <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        </div>
+      </div>
+    </div>
+  
+
         <!-- /.container-fluid -->
-         <!-- Main Content -->
-         <div id="content" >
-             <h1>VIDEOES</h1>
-                <embed src="https://www.youtube.com/embed/F9Bo89m2f6g" allowfullscreen="true" width="425" height="344">
-                      
-                     
-         </div>
 
       </div>
       <!-- End of Main Content -->
@@ -716,6 +772,30 @@ function filterFunction() {
 
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
+
+
+   <!--Scripts for charts-->
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-bar-demo.js"></script>
+  <script src="js/demo/chart-bar-rainfall.js"></script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </body>
 

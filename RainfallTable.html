@@ -159,41 +159,7 @@ function filterFunction() {
         </div>
       </li> -->
 
-       <!-- Nav Item - BoreWell -->
-       <li class="nav-item">
-          <a class="nav-link" href="borewellForm.html">
-            <i class="fas fa-upload"></i>
-            <span>Borewell</span></a>
-        </li>
-
-         <!-- Nav Item - Rainfall -->
-       <li class="nav-item">
-          <a class="nav-link" href="rainfallForm.html">
-            <i class="fas fa-spinner"></i>
-            <span>Rainfall</span></a>
-        </li>
-
-         <!-- Nav Item - Water Level -->
-       <li class="nav-item">
-          <a class="nav-link" href="waterLevelForm.html">
-            <i class="fa fa-plus-square"></i>
-            <span>Water Level</span></a>
-        </li>
-
-
-          <!-- Nav Item - Trees -->
-            <li class="nav-item">
-                    <a class="nav-link" href="treesForm.html">
-                    <i class="fa fa-tree"></i>
-                    <span>Trees</span></a>
-                </li>
-
-
-
-
-
-
-
+  
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -222,41 +188,57 @@ function filterFunction() {
         </div>
       </li>-->
 
-      <!-- Nav Item - Alerts -->
-      <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fas fa-bell"></i>
-            <span>Alerts</span></a>
-        </li>
+      <!-- Nav Item - Borewell Tables -->
 
-      <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+        <a class="nav-link" href="BoreWellTables.html">
+          <i class="fas fa-upload"></i> 
+          <span>Borewell</span></a>
+      </li>
+     
+      <!-- Nav Item - Rainfall Tables -->
+
+      <li class="nav-item">
+        <a class="nav-link" href="RainfallTable.html">
+          <i class="fas fa-spinner"></i>
+          <span>Rainfall</span></a>
       </li>
 
-      <!-- Nav Item - Tables -->
-
-        <li class="nav-item">
-          <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Borewell</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="rain.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Rainfall</span></a>
-        </li>
-
-
-      <!-- Nav Item - Maps -->
+    <!-- Nav Item - Water Level -->
       <li class="nav-item">
-        <a class="nav-link" href="maps.html">
-          <i class="fas fa-map"></i>
-          <span>Maps</span></a>
-      </li>
+          <a class="nav-link" href="WaterLevelTable.html">
+            <i class="fa fa-plus-square"></i>
+            <span>Water Level</span></a>
+        </li> 
 
+
+                <!-- Nav Item - Trees -->
+                  <li class="nav-item">
+                          <a class="nav-link" href="treesForm.html">
+                          <i class="fa fa-tree"></i>
+                          <span>Trees</span></a>
+                      </li>
+
+            <!-- Nav Item - Maps -->
+            <li class="nav-item">
+              <a class="nav-link" href="maps.html">
+                <i class="fas fa-map"></i>
+                <span>Maps</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+              <a class="nav-link" href="charts.html">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Charts</span></a>
+            </li>
+
+            <!-- Nav Item - Alerts -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-bell"></i>
+                <span>Alerts</span></a>
+            </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -654,7 +636,11 @@ function filterFunction() {
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+          <div>
+            <h1 class="h3 mb-2 text-gray-800">Mahabhujal - BoreWell Maps, Analysis and Tables</h1>
+            <p class="mb-4">Enter Location and view borewells on maps with their respactive data in tables...</p>
+            <a href="rainfallForm.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Add Data</a>
+  </div>
 
           <img width="100%" height="100%" src="img/rainfallMap.png" alt="Ground Water Recharge Area">
 
@@ -794,6 +780,21 @@ function filterFunction() {
 
         </script>
 
+  <!-- Rainfall Chart -->
+  <div class="card shadow mb-5">
+    <div class="card-header py-4">
+      <h6 class="m-0 font-weight-bold text-primary">Rainfall Data</h6>
+    </div>
+    <div class="card-body">
+      <div class="chart-area">
+        <div id="chartContainer"></div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+      </div>
+    </div>
+  </div>
+
+
+
       <!-- End of Main Content -->
 
       <!-- Footer -->
@@ -853,6 +854,37 @@ function filterFunction() {
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
   <script src="js/demo/table.js"></script>
+
+
+ <!--Scripts for charts-->
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+  <script src="js/demo/chart-bar-demo.js"></script>
+  <script src="js/demo/chart-bar-rainfall.js"></script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
+
+
+
+
 
 
 </body>
