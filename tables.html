@@ -27,7 +27,6 @@
     color: #333;
 }
 
-
     .dropdown-menu {
       width: 50%;
     }
@@ -61,7 +60,6 @@ function filterFunction() {
   }
 }
 
-
   </script>
 
   <meta charset="utf-8">
@@ -81,50 +79,6 @@ function filterFunction() {
 
   <!-- Custom styles for this page -->
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-   <!-- For Leaflet Maps -->
-   <link href="vendor/leaflet/leaflet.css" rel="stylesheet">
-   <script src="vendor/leaflet/leaflet.js"></script>
-
-   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-   <script src="vendor/leaflet/L.TileLayer.BetterWMS.js"></script>
-
-  <style>
-    .dropdown-menu {
-      width: 50%;
-    }
-
-    .scrollable-menu {
-      height: auto;
-      max-height: 200px;
-      overflow-x: hidden;
-    }
-
- /* Styling for maps */
-    .dropdown-menu {
-      width: 50%;
-    }
-
-    .scrollable-menu {
-      height: auto;
-      max-height: 200px;
-      overflow-x: hidden;
-    }
-    .map-container{
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
-  }
-  .map-container iframe{
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:absolute;
-  }
-
-  </style>
-
 
 
   <!-- For Leaflet Maps -->
@@ -229,34 +183,34 @@ function filterFunction() {
         </div>
       </li> -->
 
-       <!-- Nav Item - BoreWell
+       <!-- Nav Item - BoreWell -->
        <li class="nav-item">
           <a class="nav-link" href="borewellForm.html">
             <i class="fas fa-upload"></i>
             <span>Borewell</span></a>
-        </li> -->
+        </li>
 
-         <!-- Nav Item - Rainfall
+         <!-- Nav Item - Rainfall -->
        <li class="nav-item">
           <a class="nav-link" href="rainfallForm.html">
             <i class="fas fa-spinner"></i>
             <span>Rainfall</span></a>
-        </li> -->
+        </li>
 
-         <!-- Nav Item - Water Level
+         <!-- Nav Item - Water Level -->
        <li class="nav-item">
           <a class="nav-link" href="waterLevelForm.html">
             <i class="fa fa-plus-square"></i>
             <span>Water Level</span></a>
-        </li> -->
+        </li>
 
 
-          <!-- Nav Item - Trees
+          <!-- Nav Item - Trees -->
             <li class="nav-item">
                     <a class="nav-link" href="treesForm.html">
                     <i class="fa fa-tree"></i>
                     <span>Trees</span></a>
-                </li>-->
+                </li>
 
 
 
@@ -292,46 +246,12 @@ function filterFunction() {
         </div>
       </li>-->
 
-
-
-
-      <!-- Nav Item - Borewell Tables -->
-
-        <li class="nav-item">
-          <a class="nav-link" href="BoreWellTables.html">
-            <i class="fas fa-upload"></i>
-            <span>Borewell</span></a>
-        </li>
-
-        <!-- Nav Item - Rainfall Tables -->
-
-        <li class="nav-item">
-          <a class="nav-link" href="RainfallTable.html">
-            <i class="fas fa-spinner"></i>
-            <span>Rainfall</span></a>
-        </li>
-
-      <!-- Nav Item - Water Level -->
-        <li class="nav-item">
-            <a class="nav-link" href="waterLevelForm.html">
-              <i class="fa fa-plus-square"></i>
-              <span>Water Level</span></a>
-          </li>
-
-
-          <!-- Nav Item - Trees -->
-            <li class="nav-item">
-                    <a class="nav-link" href="treesForm.html">
-                    <i class="fa fa-tree"></i>
-                    <span>Trees</span></a>
-                </li>
-
-      <!-- Nav Item - Maps -->
+      <!-- Nav Item - Alerts -->
       <li class="nav-item">
-        <a class="nav-link" href="maps.html">
-          <i class="fas fa-map"></i>
-          <span>Maps</span></a>
-      </li>
+          <a class="nav-link" href="#">
+            <i class="fas fa-bell"></i>
+            <span>Alerts</span></a>
+        </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
@@ -340,11 +260,25 @@ function filterFunction() {
           <span>Charts</span></a>
       </li>
 
-      <!-- Nav Item - Alerts -->
+      <!-- Nav Item - Tables -->
+
+        <li class="nav-item">
+          <a class="nav-link" href="tables.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Borewell</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="rain.html">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Rainfall</span></a>
+        </li>
+
+
+      <!-- Nav Item - Maps -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-bell"></i>
-          <span>Alerts</span></a>
+        <a class="nav-link" href="maps.html">
+          <i class="fas fa-map"></i>
+          <span>Maps</span></a>
       </li>
 
       <!-- Divider -->
@@ -744,69 +678,16 @@ function filterFunction() {
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <div>
-          <h1 class="h3 mb-2 text-gray-800">Mahabhujal - Trees Maps, Analysis and Tables</h1>
-          <p class="mb-4">Enter Location and view trees on maps with their respactive data in tables...</p>
-          <a href="treesForm.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Add Tree</a>
-          <a href="deleteTree.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Delete Tree</a>
-          <a href="updateTree.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Update Tree</a>
-</div>
+          <h1 class="h2 mb-2 text-gray-800"> Borewells </h1>
 
-          <!--Map Code-->
           <div id="mapid" class="parent" style="height: 500px"></div>
-
-            <script type="text/javascript">
-
-              var mymap = L.map('mapid').setView([18.319406, 75.968962], 14);
-              L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-                maxZoom: 18,
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-                  '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                  'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                id: 'mapbox/streets-v11'
-              }).addTo(mymap);
-
-              var basemaps = {
-            		Borewells: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
-            			layers: 'groundwater:borewell_borewell',
-                  opacity: 0.5,
-                  center: [18.319406, 75.968962],
-		              zoom: 14
-            		}),
-                Aquifers: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
-                  layers: 'groundwater:aquifer',
-                  opacity: 0.5,
-                  center: [18.319406, 75.968962],
-                  zoom: 14
-                }),
-
-            	Schools : L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
-            			layers: 'groundwater:onlyOsmanabad_schools',
-                    opacity: 0.5,
-                    center: [18.319406, 75.968962],
-  		              zoom: 14
-            		}),
-
-            	Census: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
-            			layers: 'groundwater:osmanabad',
-                  opacity: 0.5,
-                  center: [18.319406, 75.968962],
-		              zoom: 14
-                })
-            	};
-
-              L.control.layers(basemaps, {}, {collapsed: false}).addTo(mymap);
-	            basemaps.Census.addTo(mymap);
-
-            </script>
-
-
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Tree Data Table</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Borewell Data Table</h6>
             </div>
+
 
             <div class="card-body">
               <div class="row">
@@ -820,16 +701,19 @@ function filterFunction() {
            <table class="table">
                <thead>
                    <tr class="filters">
-                     <th><input type="text" class="form-control" placeholder="Owner" disabled></th>
-                     <th><input type="text" class="form-control" placeholder="Location" disabled></th>
-                     <th><input type="text" class="form-control" placeholder="Height" disabled></th>
-                     <th><input type="text" class="form-control" placeholder="Date of Plant" disabled></th>
-                     <th><input type="text" class="form-control" placeholder="Tree Name" disabled></th>
 
 
 
-
-
+                       <th><input type="text" class="form-control" placeholder="Owner" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Location" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Depth" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Level of water" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Usage" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Categeory" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Status" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Water quality" disabled></th>
+                       <th><input type="text" class="form-control" placeholder="Duration of pumping"disabled> </th>
+                       <th><input type="text" class="form-control" placeholder="No of Dependant" disabled></th>
                    </tr>
                </thead>
              </div>
@@ -844,22 +728,28 @@ function filterFunction() {
                     <tr>
                       <th>Owner</th>
                       <th>Location</th>
-                      <th>Height</th>
-                      <th>Date Of Plant</th>
-                      <th>Tree name</th>
-
-
-
-                    </tr>
+                      <th>Depth</th>
+                      <th>Level of water</th>
+                      <th>Usage</th>
+                      <th>Categeory</th>
+                      <th>Status</th>
+                      <th>Water quality</th>
+                      <th>Duration of pumping </th>
+                      <th>No of Dependant</th>
+                       </tr>
                     </thead>
                     <tfoot>
                     <tr>
                       <th>Owner</th>
                       <th>Location</th>
-                      <th>Height</th>
-                      <th>Date Of Plant</th>
-                      <th>Tree name</th>
-
+                      <th>Depth</th>
+                      <th>Level of water</th>
+                      <th>Usage</th>
+                      <th>Categeory</th>
+                      <th>Status</th>
+                      <th>Water quality</th>
+                      <th>Duration of pumping </th>
+                      <th>No of Dependant</th>
 
                     </tr>
                     </tfoot>
@@ -868,20 +758,28 @@ function filterFunction() {
                       <td>Tiger Nixon</td>
                       <td>osmd</td>
                       <td>15</td>
-                      <td>5 dev</td>
-                      <td>Banyan</td>
-
+                      <td>100</td>
+                      <td>residential</td>
+                      <td>daily</td>
+                      <td>on</td>
+                      <td>good</td>
+                      <td>5 months</td>
+                      <td>4</td>
 
 
 
                     </tr>
                     <tr>
-                      <td> kixon</td>
-                      <td>yedshi</td>
-                      <td>16</td>
-                      <td>8 june</td>
-                      <td>pine</td>
-
+                      <td>Tiger Nixon</td>
+                      <td>osmd</td>
+                      <td>15</td>
+                      <td>100</td>
+                      <td>residential</td>
+                      <td>daily</td>
+                      <td>on</td>
+                      <td>good</td>
+                      <td>5 months</td>
+                      <td>4</td>
 
                     </tr>
 
@@ -891,26 +789,56 @@ function filterFunction() {
             </div>
           </div>
 
-
-<!-- Borewell Chart -->
-<div class="card shadow mb-4">
-  <div class="card-header py-3">
-    <h6 class="m-0 font-weight-bold text-primary">Tree Chart</h6>
-  </div>
-  <div class="card-body">
-    <div class="chart-area">
-      <canvas id=""></canvas>
-    </div>
-  </div>
-</div>
-
-
-
         </div>
         <!-- /.container-fluid -->
       </div>
 
+      <!--Map Code-->
 
+        <script type="text/javascript">
+
+          var mymap = L.map('mapid').setView([18.319406, 75.968962], 14);
+          L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+              '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+              'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11'
+          }).addTo(mymap);
+
+          var basemaps = {
+            Borewells: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+              layers: 'groundwater:borewell_borewell',
+              opacity: 0.5,
+              center: [18.319406, 75.968962],
+              zoom: 14
+            }),
+            Aquifers: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+              layers: 'groundwater:aquifer',
+              opacity: 0.5,
+              center: [18.319406, 75.968962],
+              zoom: 14
+            }),
+
+          Schools : L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+              layers: 'groundwater:onlyOsmanabad_schools',
+                opacity: 0.5,
+                center: [18.319406, 75.968962],
+                zoom: 14
+            }),
+
+          Census: L.tileLayer.betterWms('http://54.236.116.149:8080/geoserver/ows?', {
+              layers: 'groundwater:osmanabad',
+              opacity: 0.5,
+              center: [18.319406, 75.968962],
+              zoom: 14
+            })
+          };
+
+          L.control.layers(basemaps, {}, {collapsed: false}).addTo(mymap);
+          basemaps.Census.addTo(mymap);
+
+        </script>
 
       <!-- End of Main Content -->
 
@@ -956,6 +884,7 @@ function filterFunction() {
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
+
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -972,29 +901,6 @@ function filterFunction() {
   <script src="js/demo/datatables-demo.js"></script>
   <script src="js/demo/table.js"></script>
 
-
-  <!--Scripts for charts-->
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
-
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="js/demo/chart-bar-demo.js"></script>
-  <script src="js/demo/chart-bar-rainfall.js"></script>
-
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </body>
 
